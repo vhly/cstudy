@@ -1,0 +1,24 @@
+# C/C++ build files
+*.o
+*.exe
+
+# Temp files
+*.bak
+*.*~
+*.tmp
+*.temp
+*.vpp~*
+
+# OS auto gen files
+.DS_Store
+Thumbs.db
+
+# XCode project user's data folder
+xcuserdata/
+*.xcuserdatad/
+
+# Eclipse project files
+.project
+.classpath
+.cproject
+
