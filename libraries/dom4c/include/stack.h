@@ -18,4 +18,20 @@ typedef struct _StackItem {
 
 StackItem *CreateEmptyItem();
 
+StackItem *CreateItem(void *object);
+
+void PushItem(StackStore stack, StackItem *item);
+
+StackItem *PopItem(StackStore stack);
+
+StackItem *PeekItem(StackStore stack);
+
+int StackSize(StackStore stack);
+
+/**
+ * Remove all item ref and all items point will set NULL
+ *
+ */
+void ClearItems(StackStore stack);
+
 #endif
