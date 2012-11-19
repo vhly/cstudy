@@ -37,6 +37,9 @@ typedef struct _Attribute {
 typedef struct _Element {
     Node *parentNode;
     Attributes attributes;
+    
+    struct _Element *parentElement;
+    
 } Element;
 
 Node *CreateEmptyNode();
@@ -46,5 +49,20 @@ Node *CreateNode(char *name);
 Element *CreateEmptyElement();
 
 Element *CreateElement(char *eleName);
+
+/**
+ * Add sub element to parent
+ * @param parent Element
+ * @param sub    Element
+ */
+void AddElement(Element *parent, Element *sub);
+
+/**
+ * Add node to parent element
+ * This function usally used by add Text to Element
+ * @param parent Element
+ * @param node   Node
+ */
+void addNode(Element *parent, Node *node);
 
 #endif // dom4c_dom4c_h

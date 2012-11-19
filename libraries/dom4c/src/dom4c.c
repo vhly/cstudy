@@ -13,6 +13,11 @@
 
 // Private functions
 
+Node *FindLastChild(Element *parent)
+{
+    return NULL;
+}
+
 // Public functions
 
 Node *CreateEmptyNode()
@@ -43,4 +48,27 @@ Element *CreateElement(char *eleName)
     ret->parentNode = node;
     ret->attributes = NULL;
     return ret;
+}
+
+void AddElement(Element *parent, Element *sub)
+{
+    if (parent != NULL && sub != NULL) {
+        Node *last = FindLastChild(parent);
+        if (last == NULL) {
+            parent->parentNode->children = sub->parentNode;
+            sub->parentNode->prevSub = last;
+        } else {
+            last->nextSub = sub->parentNode;
+            sub->parentNode->prevSub = last;
+            
+        }
+    }
+}
+
+
+void addNode(Element *parent, Node *node)
+{
+    if (parent != NULL && node != NULL) {
+        
+    }
 }
