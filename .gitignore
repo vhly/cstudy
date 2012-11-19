@@ -26,3 +26,5 @@ xcuserdata/
 autoscan.log
 *.cache
 config.h.in
+aclocal.m4
+configure
