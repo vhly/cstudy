@@ -22,3 +22,7 @@ xcuserdata/
 .classpath
 .cproject
 
+# Autotools gen temp files
+autoscan.log
+*.cache
+config.h.in
