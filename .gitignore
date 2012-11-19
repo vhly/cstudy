@@ -28,3 +28,7 @@ autoscan.log
 config.h.in
 aclocal.m4
 configure
+compile
+depcomp
+install-sh
+missing
