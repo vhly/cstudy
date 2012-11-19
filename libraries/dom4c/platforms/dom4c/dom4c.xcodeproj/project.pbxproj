@@ -9,12 +9,16 @@
 /* Begin PBXBuildFile section */
 		D507A8AD1659E8700015B8B7 /* stack.c in Sources */ = {isa = PBXBuildFile; fileRef = D507A8AC1659E8700015B8B7 /* stack.c */; };
 		D507A8AF1659E87A0015B8B7 /* stack.h in Headers */ = {isa = PBXBuildFile; fileRef = D507A8AE1659E87A0015B8B7 /* stack.h */; };
+		D524D3E3165A09D9007E9572 /* dom4c.c in Sources */ = {isa = PBXBuildFile; fileRef = D524D3E2165A09D9007E9572 /* dom4c.c */; };
+		D524D3E6165A09E3007E9572 /* dom4c.h in Headers */ = {isa = PBXBuildFile; fileRef = D524D3E5165A09E3007E9572 /* dom4c.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D507A89B1659E6E30015B8B7 /* libdom4c.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libdom4c.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		D507A8AC1659E8700015B8B7 /* stack.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = stack.c; path = ../../src/stack.c; sourceTree = "<group>"; };
 		D507A8AE1659E87A0015B8B7 /* stack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = stack.h; path = ../../include/stack.h; sourceTree = "<group>"; };
+		D524D3E2165A09D9007E9572 /* dom4c.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = dom4c.c; path = ../../src/dom4c.c; sourceTree = "<group>"; };
+		D524D3E5165A09E3007E9572 /* dom4c.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dom4c.h; path = ../../include/dom4c.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +52,7 @@
 		D507A8AA1659E83F0015B8B7 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				D524D3E2165A09D9007E9572 /* dom4c.c */,
 				D507A8AC1659E8700015B8B7 /* stack.c */,
 			);
 			name = src;
@@ -56,6 +61,7 @@
 		D507A8AB1659E8600015B8B7 /* include */ = {
 			isa = PBXGroup;
 			children = (
+				D524D3E5165A09E3007E9572 /* dom4c.h */,
 				D507A8AE1659E87A0015B8B7 /* stack.h */,
 			);
 			name = include;
@@ -69,6 +75,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D507A8AF1659E87A0015B8B7 /* stack.h in Headers */,
+				D524D3E6165A09E3007E9572 /* dom4c.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -124,6 +131,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D507A8AD1659E8700015B8B7 /* stack.c in Sources */,
+				D524D3E3165A09D9007E9572 /* dom4c.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -218,6 +226,7 @@
 				D507A8A11659E6E30015B8B7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
