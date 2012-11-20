@@ -1,9 +1,9 @@
 //
-// HttpSupport
-// httpheader.c
+//  httpheader.c
+//  httpsupport
 //
-// vhly
-// 2012
+//  Created by vhly on 12-11-20.
+//  Copyright (c) 2012 vhly. All rights reserved.
 //
 
 #include "httpheader.h"

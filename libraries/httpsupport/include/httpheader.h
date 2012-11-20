@@ -1,7 +1,9 @@
 //
+//  httpheader.h
+//  httpsupport
 //
-//
-//
+//  Created by vhly on 12-11-20.
+//  Copyright (c) 2012 vhly. All rights reserved.
 //
 
 #ifndef httpsupport_httpheader_h
