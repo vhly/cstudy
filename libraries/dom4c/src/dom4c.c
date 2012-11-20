@@ -10,6 +10,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 // Private functions
 
@@ -36,6 +37,39 @@ Node *CreateNode(char *name)
     return ret;
 }
 
+Node *FindNodeByName(Node *nodeList, char type, char *name)
+{
+    Node *ret = NULL;
+    if (nodeList != NULL && name != NULL) {
+        switch (type) {
+            case NODE_TYPE_ELEMENT:
+            case NODE_TYPE_ATTRIBUTE:
+            case NODE_TYPE_TEXT:
+                {
+                    Node *cur = nodeList;
+                    while (cur != NULL) {
+                        if (cur->nextSub != NULL) {
+                            if (cur->nodeType == type) {
+                                
+                                int cmp = strcmp(cur->nodeName, name);
+                                if (cmp == 0) {
+                                    ret = cur;
+                                    break;
+                                }
+                            }
+                            cur = cur->nextSub;
+                        }
+                    }
+                }
+                break;
+                
+            default:
+                break;
+        }
+    }
+    return ret;
+}
+
 Element *CreateEmptyElement()
 {
     return CreateElement(NULL);
@@ -44,31 +78,68 @@ Element *CreateEmptyElement()
 Element *CreateElement(char *eleName)
 {
     Element *ret = (Element *)malloc(sizeof(Element));
-    Node *node = CreateNode(eleName);
-    ret->parentNode = node;
-    ret->attributes = NULL;
+    ret->nodeName = eleName;
+    ret->nodeType = NODE_TYPE_ELEMENT;
+    ret->nodeValue = NULL;
+    ret->prevSub = NULL;
+    ret->nextSub = NULL;
+    ret->children = NULL;
     return ret;
 }
 
 void AddElement(Element *parent, Element *sub)
 {
-    if (parent != NULL && sub != NULL) {
-        Node *last = FindLastChild(parent);
+    addNode(parent, sub);
+}
+
+
+Attribute *CreateAttribute(char *attName, char *attValue)
+{
+    Attribute *ret = NULL;
+    if (attName != NULL && attValue != NULL) {
+        ret = (Attribute *)malloc(sizeof(Attribute));
+        ret->nodeType = NODE_TYPE_ATTRIBUTE;
+        ret->nodeName = attName;
+        ret->nodeValue = attValue;
+        ret->prevSub = NULL;
+        ret->nextSub = NULL;
+        ret->children = NULL;
+    }
+    return ret;
+}
+
+void SetAttribute(Element *element, Attribute *attr)
+{
+    if (element != NULL && attr != NULL) {
+        Node *last = FindLastChild(element);
         if (last == NULL) {
-            parent->parentNode->children = sub->parentNode;
-            sub->parentNode->prevSub = last;
+            element->children = attr;
         } else {
-            last->nextSub = sub->parentNode;
-            sub->parentNode->prevSub = last;
-            
+            last->nextSub = attr;
+            attr->prevSub = last;
         }
     }
 }
 
+Attribute *GetAttribute(Element *element, char *attName)
+{
+    Attribute *ret = NULL;
+    if (element != NULL && attName != NULL) {
+        ret = FindNodeByName(element->children, NODE_TYPE_ATTRIBUTE, attName);
+    }
+    return ret;
+}
 
-void addNode(Element *parent, Node *node)
+
+void addNode(Node *parent, Node *node)
 {
     if (parent != NULL && node != NULL) {
-        
+        Node *last = FindLastChild(parent);
+        if (last == NULL) {
+            parent->children = node;
+        } else {
+            last->nextSub = node;
+            node->prevSub = last;
+        }
     }
 }

@@ -11,11 +11,15 @@
 
 #define NODE_TYPE_ELEMENT 1
 #define NODE_TYPE_TEXT    2
+#define NODE_TYPE_ATTRIBUTE 3
 
 
 typedef struct _Node {
     char nodeType;
+    
     char* nodeName;
+    
+    char* nodeValue;
     
     // prev sub
     struct _Node *prevSub;
@@ -26,25 +30,21 @@ typedef struct _Node {
     
 } Node;
 
-typedef struct _Attribute {
-    char *attName;
-    char *attValue;
+typedef Node Attribute, *Attributes;
 
-    struct _Attribute *prevSub;
-    struct _Attribute *nextSub;
-} Attribute, *Attributes;
+typedef Node Element;
 
-typedef struct _Element {
-    Node *parentNode;
-    Attributes attributes;
-    
-    struct _Element *parentElement;
-    
-} Element;
+#pragma mark -
+#pragma mark Element Operation
 
 Node *CreateEmptyNode();
 
 Node *CreateNode(char *name);
+
+Node *FindNodeByName(Node *nodeList, char type, char *name);
+
+#pragma mark -
+#pragma mark Element Operation
 
 Element *CreateEmptyElement();
 
@@ -57,12 +57,24 @@ Element *CreateElement(char *eleName);
  */
 void AddElement(Element *parent, Element *sub);
 
+
+#pragma mark -
+#pragma mark Attribute Operation
+
+Attribute *CreateAttribute(char *attName, char *attValue);
+
+void SetAttribute(Element *element, Attribute *attr);
+
+Attribute *GetAttribute(Element *element, char *attName);
+
+#pragma mark -
+
 /**
  * Add node to parent element
  * This function usally used by add Text to Element
  * @param parent Element
  * @param node   Node
  */
-void addNode(Element *parent, Node *node);
+void addNode(Node *parent, Node *node);
 
 #endif // dom4c_dom4c_h
