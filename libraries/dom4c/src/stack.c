@@ -26,7 +26,7 @@ StackItem *FindBottomItem(StackStore stack)
             }
         }
     }
-    return stack;
+    return ret;
 }
 
 StackItem *FindTopItem(StackStore stack)
@@ -42,7 +42,7 @@ StackItem *FindTopItem(StackStore stack)
             }
         }
     }
-    return stack;
+    return ret;
 }
 
 // Public functions

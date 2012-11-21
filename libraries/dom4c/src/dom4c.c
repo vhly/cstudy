@@ -14,9 +14,20 @@
 
 // Private functions
 
-Node *FindLastChild(Element *parent)
+Node *FindLastChild(Node *parent)
 {
-    return NULL;
+    Node *ret = NULL;
+    if (parent != NULL) {
+        ret = parent->children;
+        while (ret != NULL) {
+            if (ret->nextSub != NULL) {
+                ret = ret->nextSub;
+            } else {
+                break;
+            }
+        }
+    }
+    return ret;
 }
 
 // Public functions
