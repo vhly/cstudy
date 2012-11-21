@@ -81,6 +81,8 @@ StackItem *PopItem(StackStore stack)
             if (ret->prevItem != NULL) {
                 ret->prevItem->nextItem = NULL;
                 ret->prevItem = NULL;
+            } else if (ret->object == NULL) {
+                ret = NULL;
             }
         }
     }
@@ -89,7 +91,13 @@ StackItem *PopItem(StackStore stack)
 
 StackItem *PeekItem(StackStore stack)
 {
-    return FindTopItem(stack);
+    StackItem *ret = FindTopItem(stack);
+    if (ret != NULL) {
+        if (ret->object == NULL && ret->nextItem == NULL && ret->prevItem == NULL) {
+            ret = NULL;
+        }
+    }
+    return ret;
 }
 
 int StackSize(StackStore stack)
