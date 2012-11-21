@@ -69,29 +69,59 @@ void TestStack()
 void TestNodeCreate()
 {
     Node *node = CreateEmptyNode();
-    testAssertEquals(NULL, node->nodeName, "nodeName must NULL");
+    testAssertEquals(NULL, node->nodeName, "nodeName must NULL\n");
     
     free(node);
     
     node = CreateNode("RSS");
     
-    testAssertStringEquals("RSS", node->nodeName, "nodeName must RSS");
+    testAssertStringEquals("RSS", node->nodeName, "nodeName must RSS\n");
     
     free(node);
     
     Element *el = CreateElement("RSS");
     
-    testAssertStringEquals("RSS", el->nodeName, "nodeName must RSS");
+    testAssertStringEquals("RSS", el->nodeName, "nodeName must RSS\n");
+    
+    Element *sub1 = CreateElement("channel");
+    
+    AddElement(el, sub1);
+    
+    testAssertEquals(sub1, el->children, "sub1 must same to el->children\n");
+    
+    Element *sub2 = CreateElement("data");
+    
+    AddElement(el, sub2);
+    
+    Node *nn = FindNodeByName(el->children, NODE_TYPE_ELEMENT, "data");
+    
+    testAssertNotNull(nn, "data must found\n");
+    
+    testAssertStringEquals("data", nn->nodeName, "data item name must data");
+    
+    free(sub2);
+    
+    free(sub1);
     
     free(el);
     
 }
 
-
+void TestAttribute()
+{
+    Attribute *att = CreateAttribute("href", "http://www.google.com/");
+    
+    testAssertStringEquals("href", att->nodeName, "att name must is href\n");
+    
+    testAssertStringEquals("http://www.google.com/", att->nodeValue, "att value must is http://www.google.com/\n");
+    
+}
 
 void TestDom()
 {
     TestNodeCreate();
+    
+    TestAttribute();
 }
 
 int main(int argc, char *argv[]){

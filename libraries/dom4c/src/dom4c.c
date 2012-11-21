@@ -59,15 +59,14 @@ Node *FindNodeByName(Node *nodeList, char type, char *name)
                 {
                     Node *cur = nodeList;
                     while (cur != NULL) {
-                        if (cur->nextSub != NULL) {
-                            if (cur->nodeType == type) {
-                                
-                                int cmp = strcmp(cur->nodeName, name);
-                                if (cmp == 0) {
-                                    ret = cur;
-                                    break;
-                                }
+                        if (cur->nodeType == type) {
+                            int cmp = strcmp(cur->nodeName, name);
+                            if (cmp == 0) {
+                                ret = cur;
+                                break;
                             }
+                        }
+                        if (cur->nextSub != NULL) {
                             cur = cur->nextSub;
                         }
                     }
