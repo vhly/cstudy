@@ -11,7 +11,31 @@
 		D507A8AF1659E87A0015B8B7 /* stack.h in Headers */ = {isa = PBXBuildFile; fileRef = D507A8AE1659E87A0015B8B7 /* stack.h */; };
 		D524D3E3165A09D9007E9572 /* dom4c.c in Sources */ = {isa = PBXBuildFile; fileRef = D524D3E2165A09D9007E9572 /* dom4c.c */; };
 		D524D3E6165A09E3007E9572 /* dom4c.h in Headers */ = {isa = PBXBuildFile; fileRef = D524D3E5165A09E3007E9572 /* dom4c.h */; };
+		D5DCCB9E165C7E3E00C027A4 /* domtest.c in Sources */ = {isa = PBXBuildFile; fileRef = D5DCCB9D165C7E3E00C027A4 /* domtest.c */; };
+		D5DCCB9F165C7EA700C027A4 /* libdom4c.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D507A89B1659E6E30015B8B7 /* libdom4c.a */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D5DCCBA0165C7EAF00C027A4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D507A8921659E6E20015B8B7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D507A89A1659E6E20015B8B7;
+			remoteInfo = dom4c;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D5DCCB91165C7E1900C027A4 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		D507A89B1659E6E30015B8B7 /* libdom4c.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libdom4c.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -19,6 +43,8 @@
 		D507A8AE1659E87A0015B8B7 /* stack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = stack.h; path = ../../include/stack.h; sourceTree = "<group>"; };
 		D524D3E2165A09D9007E9572 /* dom4c.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = dom4c.c; path = ../../src/dom4c.c; sourceTree = "<group>"; };
 		D524D3E5165A09E3007E9572 /* dom4c.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dom4c.h; path = ../../include/dom4c.h; sourceTree = "<group>"; };
+		D5DCCB93165C7E1900C027A4 /* domtest */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = domtest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D5DCCB9D165C7E3E00C027A4 /* domtest.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = domtest.c; path = ../../test/domtest.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,12 +55,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D5DCCB90165C7E1900C027A4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D5DCCB9F165C7EA700C027A4 /* libdom4c.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		D507A8901659E6E20015B8B7 = {
 			isa = PBXGroup;
 			children = (
+				D5DCCB8D165C7DF100C027A4 /* test */,
 				D507A8AB1659E8600015B8B7 /* include */,
 				D507A8AA1659E83F0015B8B7 /* src */,
 				D507A89C1659E6E30015B8B7 /* Products */,
@@ -45,6 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				D507A89B1659E6E30015B8B7 /* libdom4c.a */,
+				D5DCCB93165C7E1900C027A4 /* domtest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -65,6 +101,14 @@
 				D507A8AE1659E87A0015B8B7 /* stack.h */,
 			);
 			name = include;
+			sourceTree = "<group>";
+		};
+		D5DCCB8D165C7DF100C027A4 /* test */ = {
+			isa = PBXGroup;
+			children = (
+				D5DCCB9D165C7E3E00C027A4 /* domtest.c */,
+			);
+			name = test;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -99,6 +143,24 @@
 			productReference = D507A89B1659E6E30015B8B7 /* libdom4c.a */;
 			productType = "com.apple.product-type.library.static";
 		};
+		D5DCCB92165C7E1900C027A4 /* domtest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D5DCCB9A165C7E1C00C027A4 /* Build configuration list for PBXNativeTarget "domtest" */;
+			buildPhases = (
+				D5DCCB8F165C7E1900C027A4 /* Sources */,
+				D5DCCB90165C7E1900C027A4 /* Frameworks */,
+				D5DCCB91165C7E1900C027A4 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D5DCCBA1165C7EAF00C027A4 /* PBXTargetDependency */,
+			);
+			name = domtest;
+			productName = domtest;
+			productReference = D5DCCB93165C7E1900C027A4 /* domtest */;
+			productType = "com.apple.product-type.tool";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -121,6 +183,7 @@
 			projectRoot = "";
 			targets = (
 				D507A89A1659E6E20015B8B7 /* dom4c */,
+				D5DCCB92165C7E1900C027A4 /* domtest */,
 			);
 		};
 /* End PBXProject section */
@@ -135,7 +198,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D5DCCB8F165C7E1900C027A4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D5DCCB9E165C7E3E00C027A4 /* domtest.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D5DCCBA1165C7EAF00C027A4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D507A89A1659E6E20015B8B7 /* dom4c */;
+			targetProxy = D5DCCBA0165C7EAF00C027A4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		D507A89D1659E6E30015B8B7 /* Debug */ = {
@@ -207,6 +286,22 @@
 			};
 			name = Release;
 		};
+		D5DCCB9B165C7E1C00C027A4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		D5DCCB9C165C7E1C00C027A4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -227,6 +322,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		D5DCCB9A165C7E1C00C027A4 /* Build configuration list for PBXNativeTarget "domtest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D5DCCB9B165C7E1C00C027A4 /* Debug */,
+				D5DCCB9C165C7E1C00C027A4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
