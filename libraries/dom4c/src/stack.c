@@ -106,6 +106,7 @@ int StackSize(StackStore stack)
                     break;
                 }
             }
+            ret--;  // The first (bottom) item is unused. so reduce one for count.
         }
     }
     return ret;
