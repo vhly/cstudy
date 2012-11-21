@@ -5,6 +5,8 @@
 #include "stack.h"
 #include "dom4c.h"
 
+#include "testdefine.h"
+
 void TestStackPush()
 {
     StackStore stack = CreateEmptyItem();
@@ -64,11 +66,40 @@ void TestStack()
     TestStackPeek();
 }
 
+void TestNodeCreate()
+{
+    Node *node = CreateEmptyNode();
+    testAssertEquals(NULL, node->nodeName, "nodeName must NULL");
+    
+    free(node);
+    
+    node = CreateNode("RSS");
+    
+    testAssertStringEquals("RSS", node->nodeName, "nodeName must RSS");
+    
+    free(node);
+    
+    Element *el = CreateElement("RSS");
+    
+    testAssertStringEquals("RSS", el->nodeName, "nodeName must RSS");
+    
+    free(el);
+    
+}
+
+
+
+void TestDom()
+{
+    TestNodeCreate();
+}
+
 int main(int argc, char *argv[]){
 	printf("Hello for DOM4C Test\n");
     
     TestStack();
     
+    TestDom();
     
 	return 0;
 }

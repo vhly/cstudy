@@ -43,6 +43,7 @@
 		D507A8AE1659E87A0015B8B7 /* stack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = stack.h; path = ../../include/stack.h; sourceTree = "<group>"; };
 		D524D3E2165A09D9007E9572 /* dom4c.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = dom4c.c; path = ../../src/dom4c.c; sourceTree = "<group>"; };
 		D524D3E5165A09E3007E9572 /* dom4c.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dom4c.h; path = ../../include/dom4c.h; sourceTree = "<group>"; };
+		D56165F2165D175100EC87A8 /* testdefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = testdefine.h; path = ../../test/testdefine.h; sourceTree = "<group>"; };
 		D5DCCB93165C7E1900C027A4 /* domtest */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = domtest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5DCCB9D165C7E3E00C027A4 /* domtest.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = domtest.c; path = ../../test/domtest.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -107,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				D5DCCB9D165C7E3E00C027A4 /* domtest.c */,
+				D56165F2165D175100EC87A8 /* testdefine.h */,
 			);
 			name = test;
 			sourceTree = "<group>";
@@ -330,6 +332,7 @@
 				D5DCCB9C165C7E1C00C027A4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
