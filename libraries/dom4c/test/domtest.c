@@ -125,6 +125,17 @@ void TestAttribute()
     
     testAssertNotNull(a1, "Cant find attribute href\n");
     
+    Attribute *att2 = CreateAttribute("href", "http://www.apple.com/");
+    
+    SetAttribute(el, att2);
+    
+    Attribute *tmp = GetAttribute(el, "href");
+    
+    testAssertNotNull(tmp, "Cant find attribute href\n");
+    
+    testAssertStringEquals("http://www.apple.com/", tmp->nodeValue, "Attribute href value must http://www.apple.com/\n");
+    
+    
     free(att);
     
     free(el);
