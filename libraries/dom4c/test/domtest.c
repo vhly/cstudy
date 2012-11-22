@@ -133,6 +133,7 @@ void TestAttribute()
 
 void TestFind()
 {
+    
     NodeList nlist = CreateNode("rss");
     
     Node *cur = NULL;
@@ -144,13 +145,13 @@ void TestFind()
         addNode(nlist, cur);
     }
     
-    
-    
     NodeList result = FindNodesByName(nlist, NODE_TYPE_NODE, "channel");
     
     printf("Find nodes\n");
     
     testAssertNotNull(result, "find must not null\n");
+    
+    free(nlist);
     
 }
 

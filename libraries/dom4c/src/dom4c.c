@@ -182,12 +182,20 @@ Attribute *CreateAttribute(char *attName, char *attValue)
 void SetAttribute(Element *element, Attribute *attr)
 {
     if (element != NULL && attr != NULL) {
-        Node *last = FindLastChild(element);
-        if (last == NULL) {
-            element->children = attr;
-        } else {
-            last->nextSub = attr;
-            attr->prevSub = last;
+        // Check attribute is exists?
+        Attribute *tmp = FindNodeByName(element->children, NODE_TYPE_ATTRIBUTE, attr->nodeName);
+        if (tmp != NULL) {
+            // Set exists attribute by attribute's name
+            tmp->nodeValue = attr->nodeValue;
+        }else{
+            // set new attribute
+            Node *last = FindLastChild(element);
+            if (last == NULL) {
+                element->children = attr;
+            } else {
+                last->nextSub = attr;
+                attr->prevSub = last;
+            }
         }
     }
 }
