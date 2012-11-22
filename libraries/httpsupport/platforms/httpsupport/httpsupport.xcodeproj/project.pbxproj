@@ -7,13 +7,40 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D55AC76A165E1846000BC731 /* httptest.c in Sources */ = {isa = PBXBuildFile; fileRef = D55AC769165E1846000BC731 /* httptest.c */; };
+		D55AC76B165E1856000BC731 /* libhttpsupport.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D5F2D7D7165BCDB90045BEED /* libhttpsupport.a */; };
 		D5E4EAC5165BDBA70051790B /* cookie.h in Headers */ = {isa = PBXBuildFile; fileRef = D5E4EAC4165BDBA70051790B /* cookie.h */; };
 		D5E4EAC8165BDBBE0051790B /* cookie.c in Sources */ = {isa = PBXBuildFile; fileRef = D5E4EAC7165BDBBE0051790B /* cookie.c */; };
 		D5F2D7E1165BCDDA0045BEED /* httpheader.h in Headers */ = {isa = PBXBuildFile; fileRef = D5F2D7E0165BCDDA0045BEED /* httpheader.h */; };
 		D5F2D7E3165BCDE80045BEED /* httpheader.c in Sources */ = {isa = PBXBuildFile; fileRef = D5F2D7E2165BCDE80045BEED /* httpheader.c */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		D55AC76C165E185C000BC731 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D5F2D7CE165BCDB90045BEED /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D5F2D7D6165BCDB90045BEED;
+			remoteInfo = httpsupport;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D55AC75C165E1819000BC731 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		D55AC75E165E1819000BC731 /* httptest */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = httptest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D55AC769165E1846000BC731 /* httptest.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = httptest.c; path = ../../test/httptest.c; sourceTree = "<group>"; };
+		D55AC76F165E1958000BC731 /* testdefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = testdefine.h; path = ../../test/testdefine.h; sourceTree = "<group>"; };
 		D5E4EAC4165BDBA70051790B /* cookie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cookie.h; path = ../../include/cookie.h; sourceTree = "<group>"; };
 		D5E4EAC7165BDBBE0051790B /* cookie.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = cookie.c; path = ../../src/cookie.c; sourceTree = "<group>"; };
 		D5F2D7D7165BCDB90045BEED /* libhttpsupport.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libhttpsupport.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -22,6 +49,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		D55AC75B165E1819000BC731 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D55AC76B165E1856000BC731 /* libhttpsupport.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D5F2D7D4165BCDB90045BEED /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -32,9 +67,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D55AC768165E182C000BC731 /* test */ = {
+			isa = PBXGroup;
+			children = (
+				D55AC76F165E1958000BC731 /* testdefine.h */,
+				D55AC769165E1846000BC731 /* httptest.c */,
+			);
+			name = test;
+			sourceTree = "<group>";
+		};
 		D5F2D7CC165BCDB90045BEED = {
 			isa = PBXGroup;
 			children = (
+				D55AC768165E182C000BC731 /* test */,
 				D5F2D7DF165BCDC70045BEED /* include */,
 				D5F2D7DE165BCDC10045BEED /* src */,
 				D5F2D7D8165BCDB90045BEED /* Products */,
@@ -45,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				D5F2D7D7165BCDB90045BEED /* libhttpsupport.a */,
+				D55AC75E165E1819000BC731 /* httptest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -82,6 +128,24 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		D55AC75D165E1819000BC731 /* httptest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D55AC765165E1819000BC731 /* Build configuration list for PBXNativeTarget "httptest" */;
+			buildPhases = (
+				D55AC75A165E1819000BC731 /* Sources */,
+				D55AC75B165E1819000BC731 /* Frameworks */,
+				D55AC75C165E1819000BC731 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D55AC76D165E185C000BC731 /* PBXTargetDependency */,
+			);
+			name = httptest;
+			productName = httptest;
+			productReference = D55AC75E165E1819000BC731 /* httptest */;
+			productType = "com.apple.product-type.tool";
+		};
 		D5F2D7D6165BCDB90045BEED /* httpsupport */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = D5F2D7DB165BCDB90045BEED /* Build configuration list for PBXNativeTarget "httpsupport" */;
@@ -121,11 +185,20 @@
 			projectRoot = "";
 			targets = (
 				D5F2D7D6165BCDB90045BEED /* httpsupport */,
+				D55AC75D165E1819000BC731 /* httptest */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
+		D55AC75A165E1819000BC731 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D55AC76A165E1846000BC731 /* httptest.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D5F2D7D3165BCDB90045BEED /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -137,7 +210,29 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		D55AC76D165E185C000BC731 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D5F2D7D6165BCDB90045BEED /* httpsupport */;
+			targetProxy = D55AC76C165E185C000BC731 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		D55AC766165E1819000BC731 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		D55AC767165E1819000BC731 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		D5F2D7D9165BCDB90045BEED /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -208,6 +303,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		D55AC765165E1819000BC731 /* Build configuration list for PBXNativeTarget "httptest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D55AC766165E1819000BC731 /* Debug */,
+				D55AC767165E1819000BC731 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		D5F2D7D1165BCDB90045BEED /* Build configuration list for PBXProject "httpsupport" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

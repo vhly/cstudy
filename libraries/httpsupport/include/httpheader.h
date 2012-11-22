@@ -17,9 +17,18 @@ typedef struct _HttpHeader {
 	struct _HttpHeader *next;
 } HttpHeader, *HttpHeaders;
 
+/**
+ * Get HTTP header by header name
+ * @param hName char* header name
+ * @return HttpHeader header or NULL
+ */
+HttpHeader *GetHttpHeader(HttpHeaders headers, char *hName);
+
 HttpHeader *CreateHttpHeader(char *hName, char *hValue);
 
 void AppendHeader(HttpHeaders headers, HttpHeader *header);
+
+char *Header2String(HttpHeader *header, char needCRLF);
 
 #endif // httpsupport_httpheader_h
 
