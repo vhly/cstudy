@@ -41,6 +41,7 @@ Node *CreateNode(char *name)
 {
     Node *ret = (Node *)malloc(sizeof(Node));
     ret->nodeName = name;
+    ret->nodeValue = NULL;
     ret->nodeType = 0;
     ret->prevSub = NULL;
     ret->nextSub = NULL;
@@ -48,7 +49,7 @@ Node *CreateNode(char *name)
     return ret;
 }
 
-Node *FindNodeByName(Node *nodeList, char type, char *name)
+Node *FindNodeByName(NodeList nodeList, char type, char *name)
 {
     Node *ret = NULL;
     if (nodeList != NULL && name != NULL) {
@@ -78,6 +79,66 @@ Node *FindNodeByName(Node *nodeList, char type, char *name)
         }
     }
     return ret;
+}
+
+Node *CopyNode(Node *target)
+{
+    Node *ret = NULL;
+    if (target != NULL) {
+        ret = (Node *)malloc(sizeof(Node));
+        ret->nodeName = target->nodeName;
+        ret->nodeType = target->nodeType;
+        ret->nodeValue = target->nodeValue;
+        ret->children = target->children;
+        ret->nextSub = NULL;
+        ret->prevSub = NULL;
+    }
+    return ret;
+}
+
+NodeList FindNodesByName(Node *parent, char type, char *name)
+{
+    NodeList ret = NULL;
+    NodeList head = NULL;
+    
+    if (parent != NULL && name != NULL) {
+        switch (type) {
+            case NODE_TYPE_NODE:
+            case NODE_TYPE_ELEMENT:
+            case NODE_TYPE_ATTRIBUTE:
+            case NODE_TYPE_TEXT:
+            {
+                Node *cur = parent->children;
+                while (cur != NULL) {
+                    if (cur->nodeType == type) {
+                        int cmp = strcmp(cur->nodeName, name);
+                        if (cmp == 0) {
+                            if (ret == NULL) {
+                                ret = CopyNode(cur);
+                                head = ret;
+                            }else{
+                                Node *tmp = CopyNode(cur);
+                                ret->nextSub = tmp;
+                                tmp->prevSub = ret;
+                                ret = tmp;
+                            }
+                        }
+                    }
+                    if (cur->nextSub != NULL) {
+                        cur = cur->nextSub;
+                    } else {
+                        break;
+                    }
+                }
+            }
+                break;
+                
+            default:
+                break;
+        }
+    }
+    
+    return head;
 }
 
 Element *CreateEmptyElement()

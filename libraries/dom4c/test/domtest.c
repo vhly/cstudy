@@ -115,6 +115,43 @@ void TestAttribute()
     
     testAssertStringEquals("http://www.google.com/", att->nodeValue, "att value must is http://www.google.com/\n");
     
+    Element *el = CreateElement("a");
+    
+    SetAttribute(el, att);
+    
+    testAssertNotNull(el->children, "attribute set is Error\n");
+    
+    Attribute *a1 = GetAttribute(el, "href");
+    
+    testAssertNotNull(a1, "Cant find attribute href\n");
+    
+    free(att);
+    
+    free(el);
+    
+}
+
+void TestFind()
+{
+    NodeList nlist = CreateNode("rss");
+    
+    Node *cur = NULL;
+    
+    int i;
+    
+    for (i = 0; i < 10; i++) {
+        cur = CreateNode("channel");
+        addNode(nlist, cur);
+    }
+    
+    
+    
+    NodeList result = FindNodesByName(nlist, NODE_TYPE_NODE, "channel");
+    
+    printf("Find nodes\n");
+    
+    testAssertNotNull(result, "find must not null\n");
+    
 }
 
 void TestDom()
@@ -122,6 +159,8 @@ void TestDom()
     TestNodeCreate();
     
     TestAttribute();
+    
+    TestFind();
 }
 
 int main(int argc, char *argv[]){
@@ -131,7 +170,9 @@ int main(int argc, char *argv[]){
     
     TestDom();
     
-	return 0;
+    printf("Finished\n");
+	
+    return 0;
 }
 
 
