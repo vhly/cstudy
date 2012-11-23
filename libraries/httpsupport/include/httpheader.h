@@ -18,12 +18,27 @@ typedef struct _HttpHeader {
 } HttpHeader, *HttpHeaders;
 
 /**
- * Get HTTP header by header name
+ * Get HTTP header by header name<br/>
+ * Get first header from headers
  * @param hName char* header name
  * @return HttpHeader header or NULL
  */
 HttpHeader *GetHttpHeader(HttpHeaders headers, char *hName);
 
+/**
+ * Get HTTP header's value by header name
+ * @param headers HttpHeaders http headers list
+ * @param hName header name
+ * @return char* header value or NULL
+ */
+char *GetHttpHeaderValue(HttpHeaders headers, char *hName);
+
+/**
+ * Create a http header
+ *
+ *
+ *
+ */
 HttpHeader *CreateHttpHeader(char *hName, char *hValue);
 
 void AppendHeader(HttpHeaders headers, HttpHeader *header);

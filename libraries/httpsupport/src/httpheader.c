@@ -55,6 +55,18 @@ HttpHeader *GetHttpHeader(HttpHeaders headers, char *hName)
     return ret;
 }
 
+char *GetHttpHeaderValue(HttpHeaders headers, char *hName)
+{
+    char *ret = NULL;
+    if (headers != NULL && hName != NULL) {
+        HttpHeader *header = GetHttpHeader(headers, hName);
+        if (header != NULL) {
+            ret = header->headerValue;
+        }
+    }
+    return ret;
+}
+
 HttpHeader *CreateHttpHeader(char *hName, char *hValue)
 {
     HttpHeader *ret = NULL;
