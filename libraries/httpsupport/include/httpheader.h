@@ -35,9 +35,9 @@ char *GetHttpHeaderValue(HttpHeaders headers, char *hName);
 
 /**
  * Create a http header
- *
- *
- *
+ * @param hName header's name
+ * @param hValue header's value
+ * @return HttpHeader Created http header
  */
 HttpHeader *CreateHttpHeader(char *hName, char *hValue);
 
