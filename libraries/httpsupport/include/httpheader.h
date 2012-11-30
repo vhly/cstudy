@@ -9,13 +9,9 @@
 #ifndef httpsupport_httpheader_h
 #define httpsupport_httpheader_h
 
-typedef struct _HttpHeader {
-	char *headerName;
-	char *headerValue;
-	
-	struct _HttpHeader *prev;
-	struct _HttpHeader *next;
-} HttpHeader, *HttpHeaders;
+#include "keypair.h"
+
+typedef KeyPair HttpHeader, *HttpHeaders;
 
 /**
  * Get HTTP header by header name<br/>
