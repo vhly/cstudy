@@ -30,7 +30,15 @@ void TestHttpHeader()
 
 void TestStringUtil()
 {
-    ParseGMTTime("Mon, 03 Dec 2012 09:01:42 GMT");
+    time_t tt1 = ParseGMTTime("Mon, 03 Dec 2012 09:01:42 GMT");
+    
+    time_t tt2 = ParseGMTTime("Mon, 03 Dec   2012 09:01:42 GMT");
+    
+    long lt1 = tt1 / 10000;
+    
+    long lt2 = tt2 / 10000;
+    
+    testAssertEquals(lt2, lt1, "Time must equals\n");
 }
 
 int main(int argc, char *argv[]){

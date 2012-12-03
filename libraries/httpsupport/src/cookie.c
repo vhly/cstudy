@@ -13,6 +13,8 @@
 #include <string.h>
 #include <time.h>
 
+#include "stringutil.h"
+
 Cookie *CreateCookie(char *name, char *value)
 {
     Cookie *ret = NULL;
@@ -34,17 +36,23 @@ Cookie *CreateCookie(char *name, char *value)
 
 char CookieIsExpired(Cookie *cookie)
 {
-    char ret = 1;
+    char ret = COOKIE_EXPIRE_EXPIRED;
     if (cookie != NULL) {
-        ret = 0;
+        ret = COOKIE_EXPIRE_NO;
+        time_t t1 = time(NULL);
+        
         if (cookie->maxAge != 0 && cookie->receivedTime != 0) {
             long maxTime = cookie->receivedTime + cookie->maxAge;
-            time_t t1 = time(NULL);
             if (t1 <= maxTime) {
-                ret = 1;
+                ret = COOKIE_EXPIRE_EXPIRED;
             }
         }else if (cookie->expireStr != NULL){
-            
+            time_t t2 = ParseGMTTime(cookie->expireStr);
+            if (t2 > 0) {
+                if (t1 <= t2) {
+                    ret = COOKIE_EXPIRE_EXPIRED;
+                }
+            }
         }
     }
     return ret;

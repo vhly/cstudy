@@ -9,6 +9,9 @@
 #ifndef httpsupport_cookie_h
 #define httpsupport_cookie_h
 
+#define COOKIE_EXPIRE_NO 0
+#define COOKIE_EXPIRE_EXPIRED 1
+
 typedef struct _Cookie {
     char *name;
     char *value;
