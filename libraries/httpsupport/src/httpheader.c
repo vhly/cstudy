@@ -34,15 +34,7 @@ HttpHeader *CreateHttpHeader(char *hName, char *hValue)
 
 void AppendHeader(HttpHeaders headers, HttpHeader *header)
 {
-    if (headers != NULL && header != NULL) {
-        HttpHeader *lastHeader = FindLastPair(headers);
-        if (lastHeader != NULL) {
-            lastHeader->next = header;
-            header->prev = lastHeader;
-        } else {
-            // TODO Normal is unreach
-        }
-    }
+    AppendToPairs(headers, header);
 }
 
 char *Header2String(HttpHeader *header, char needCRLF)

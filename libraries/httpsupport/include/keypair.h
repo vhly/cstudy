@@ -43,4 +43,19 @@ char *GetKeyPairValue(KeyPairs headers, char *hName);
  */
 KeyPair *CreateKeyPair(char *hName, char *hValue);
 
+/**
+ * Append KeyPair object to KeyPairs list
+ * @param pairs
+ * @param pair
+ */
+void AppendToPairs(KeyPairs pairs, KeyPair *pair);
+
+/**
+ * Gen String define, split by splitChar between key and value
+ * @param pair KeyPair instance
+ * @param splitChar char with split.
+ * @return char*
+ */
+char *PairToString(KeyPair *pair, char splitChar);
+
 #endif

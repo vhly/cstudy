@@ -75,3 +75,41 @@ KeyPair *CreateKeyPair(char *hName, char *hValue)
     }
     return ret;
 }
+
+void AppendToPairs(KeyPairs pairs, KeyPair *pair)
+{
+    if (pairs != NULL && pair != NULL) {
+        KeyPair *lastPair = FindLastPair(pairs);
+        if (lastPair != NULL) {
+            lastPair->next = pair;
+            pair->prev = lastPair;
+        } else {
+            // TODO Normal is unreach
+        }
+    }
+}
+
+char *PairToString(KeyPair *pair, char splitChar)
+{
+    char *ret = NULL;
+    if (pair != NULL) {
+        if (splitChar == 0) {
+            splitChar = '=';
+        }
+        size_t nlen, vlen;  // name length and value len
+        char* name = pair->name;
+        char* value = pair->value;
+        
+        if (name != NULL && value != NULL) {
+            nlen = strlen(name);
+            vlen = strlen(value);
+            if (nlen > 0 && vlen > 0) {
+                size_t totalLength = nlen + 2 + vlen;
+                ret = (char *)malloc(sizeof(char) * totalLength);
+                sprintf(ret, "%s%c%s", name,splitChar,value);
+            }
+        }
+    }
+    return ret;
+}
+
