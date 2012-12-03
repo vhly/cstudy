@@ -22,6 +22,11 @@ HttpHeader *GetHttpHeader(HttpHeaders headers, char *hName)
     return GetKeyPair(headers, hName);
 }
 
+HttpHeaders GetHttpHeaders(HttpHeaders headers, char *hName)
+{
+    return GetKeyPairs(headers, hName);
+}
+
 char *GetHttpHeaderValue(HttpHeaders headers, char *hName)
 {
     return GetKeyPairValue(headers, hName);

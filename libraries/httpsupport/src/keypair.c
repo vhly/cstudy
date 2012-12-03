@@ -51,6 +51,33 @@ KeyPair *GetKeyPair(KeyPairs pairs, char *kName)
     return ret;
 }
 
+KeyPairs GetKeyPairs(KeyPairs pairs, char *hName)
+{
+    KeyPairs ret = NULL;
+    if (pairs != NULL && hName != NULL) {
+        char found = 0;
+        KeyPair *pair = FindLastPair(pairs);
+        if (pair != NULL) {
+            while (pair != NULL) {
+                if (pair->name != NULL) {
+                    int cmp = strcmp(pair->name, hName);
+                    if (cmp == 0) {
+                        found = 1;
+                        if (ret == NULL) {
+                            ret = CreateKeyPair(pair->name, pair->value);
+                        } else {
+                            KeyPair *tmp = CreateKeyPair(pair->name, pair->value);
+                            AppendToPairs(ret, tmp);
+                        }
+                    }
+                }
+                pair = pair->prev;
+            }
+        }
+    }
+    return ret;
+}
+
 char *GetKeyPairValue(KeyPairs headers, char *hName)
 {
     char *ret = NULL;

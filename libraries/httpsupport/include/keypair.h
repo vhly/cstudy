@@ -28,6 +28,14 @@ KeyPair *FindLastPair(KeyPairs pairs);
 KeyPair *GetKeyPair(KeyPairs pairs, char *kName);
 
 /**
+ * Get KeyPairs which named hName
+ * @param pairs KeyPairs find list
+ * @param hName   name key
+ * @return Copy new pairs list which name is hName all is new.
+ */
+KeyPairs GetKeyPairs(KeyPairs pairs, char *hName);
+
+/**
  * Get KeyPair's value by name
  * @param headers keypairs list
  * @param hName header name

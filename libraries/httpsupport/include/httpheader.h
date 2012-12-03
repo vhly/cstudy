@@ -22,6 +22,14 @@ typedef KeyPair HttpHeader, *HttpHeaders;
 HttpHeader *GetHttpHeader(HttpHeaders headers, char *hName);
 
 /**
+ * Get HttpHeaders which named hName
+ * @param headers HttpHeaders find list
+ * @param hName   name key
+ * @return Copy new headers list which name is hName all is new.
+ */
+HttpHeaders GetHttpHeaders(HttpHeaders headers, char *hName);
+
+/**
  * Get HTTP header's value by header name
  * @param headers HttpHeaders http headers list
  * @param hName header name
