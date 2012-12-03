@@ -10,8 +10,8 @@
 #define httpsupport_keypair_h
 
 typedef struct _KeyPair {
-	char *headerName;
-	char *headerValue;
+	char *name;
+	char *value;
 	
 	struct _KeyPair *prev;
 	struct _KeyPair *next;
@@ -26,5 +26,21 @@ KeyPair *FindLastPair(KeyPairs pairs);
  * @return KeyPair pair or NULL
  */
 KeyPair *GetKeyPair(KeyPairs pairs, char *kName);
+
+/**
+ * Get KeyPair's value by name
+ * @param headers keypairs list
+ * @param hName header name
+ * @return char* header value or NULL
+ */
+char *GetKeyPairValue(KeyPairs headers, char *hName);
+
+/**
+ * Create a Key Pair
+ * @param hName name
+ * @param hValue value
+ * @return KeyPair Created
+ */
+KeyPair *CreateKeyPair(char *hName, char *hValue);
 
 #endif
