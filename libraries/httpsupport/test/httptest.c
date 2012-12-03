@@ -3,6 +3,8 @@
 
 #include <stdio.h>
 
+#include "stringutil.h"
+
 #include "testdefine.h"
 
 void TestHttpHeader()
@@ -26,10 +28,17 @@ void TestHttpHeader()
     
 }
 
+void TestStringUtil()
+{
+    ParseGMTTime("Mon, 03 Dec 2012 09:01:42 GMT");
+}
+
 int main(int argc, char *argv[]){
 	printf("HttpSupport Test:\n");
 	
     TestHttpHeader();
+    
+    TestStringUtil();
     
     return 0;
 }
