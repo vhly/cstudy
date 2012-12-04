@@ -17,27 +17,30 @@ typedef struct _Cookie {
     char *value;
     char *path;
     char *domain;
-    
+
     char *expireStr;
-    
+    /**
+     * Cookie max age since received from server<br/>
+     * This field unit is second
+     */
     int maxAge;
-    
+
     /**
      * Must used by https protocol
      */
-    char secret;
-    
+    char secure;
+
     /**
      * Only support http protocol not support https
      */
     char httpOnly;
-    
+
     /**
      * Received from http server's time
      */
     long receivedTime;
-    
-    
+
+
     struct _Cookie *prevSub;
     struct _Cookie *nextSub;
 } Cookie, *CookieStore;
@@ -56,5 +59,21 @@ Cookie *CreateCookie(char *name, char *value);
  * @return char 0 is no; 1 is expired
  */
 char CookieIsExpired(Cookie *cookie);
+
+/**
+ * Cookie to String, this function usally used by http client send to server.<br/>
+ * Some time when this lib used by server dev, Server use this function for Cookie output with includeInfo parameter.
+ * @param cookie Cookie* Cookie instance.
+ * @param includeInfo char, 0 not include additional fields, like path, domain and others; 1 need output additional fields.
+ * @return char* Cookie's string description.
+ */
+char *CookieToString(Cookie *cookie, char includeInfo);
+
+/**
+ * Parse Cookie from string.
+ * @param cookieStr char*, cookie str info.
+ * @return Cookie* , Cookie instance.
+ */
+Cookie *ParseCookie(char *cookieStr);
 
 #endif

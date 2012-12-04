@@ -51,6 +51,50 @@ void TestCookieSupport()
 
     testAssertEquals(COOKIE_EXPIRE_EXPIRED, st, "Cookie Must expired\n");
 
+    ck1->expireStr = "Wen, 05 Dec 2012 09:01:42 GMT";
+
+    st = CookieIsExpired(ck1);
+
+    testAssertEquals(COOKIE_EXPIRE_NO, st, "Cookie Must Not expired\n");
+
+    ck1->expireStr = NULL;
+
+    ck1->receivedTime = time(NULL);
+
+    ck1->maxAge = 300;
+
+    st = CookieIsExpired(ck1);
+
+    testAssertEquals(COOKIE_EXPIRE_NO, st, "Cookie Must Not expired\n");
+
+    ck1->receivedTime = time(NULL) - (2 * 24 * 60 * 60 * 1000);
+
+    ck1->maxAge = 300;
+
+    st = CookieIsExpired(ck1);
+
+    testAssertEquals(COOKIE_EXPIRE_EXPIRED, st, "Cookie Must expired\n");
+
+    ck1->path = "/";
+
+    ck1->expireStr = "Wen, 05 Dec 2012 09:01:42 GMT";
+
+    ck1->domain = ".baidu.com";
+
+    ck1->secure = 1;
+
+    char *cs = CookieToString(ck1, 1);
+
+    printf("Cookie: %s\n", cs);
+
+    Cookie *ck2 = ParseCookie(cs);
+
+    ck2->value = NULL;
+
+    cs = CookieToString(ck2, 1);
+
+    printf("Cookie: %s\n", cs);
+
 }
 
 int main(int argc, char *argv[]){
