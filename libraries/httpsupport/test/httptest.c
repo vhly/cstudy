@@ -41,6 +41,36 @@ void TestStringUtil()
     long lt2 = tt2 / 10000;
 
     testAssertEquals(lt2, lt1, "Time must equals\n");
+
+    char *s1 = "    ";
+
+    char *ds = TrimString(s1);
+
+    printf("Trim: %s\n", ds);
+
+    s1 = "    a";
+
+    ds = TrimString(s1);
+
+    printf("Trim: %s\n", ds);
+
+    s1 = "    a ";
+
+    ds = TrimString(s1);
+
+    printf("Trim: %s\n", ds);
+
+    s1 = "    a b c se a";
+
+    ds = TrimString(s1);
+
+    printf("Trim: %s\n", ds);
+
+    s1 = "b b c se a";
+
+    ds = TrimString(s1);
+
+    printf("Trim: %s\n", ds);
 }
 
 void TestCookieSupport()
@@ -89,11 +119,17 @@ void TestCookieSupport()
 
     Cookie *ck2 = ParseCookie(cs);
 
-    ck2->value = NULL;
+    printf("TestParse: %s\n", ck2->name);
 
-    cs = CookieToString(ck2, 1);
+    printf("TestParse: %s\n", ck2->value);
 
-    printf("Cookie: %s\n", cs);
+    printf("TestParse: %s\n", ck2->path);
+
+    printf("TestParse: %s\n", ck2->domain);
+
+    printf("TestParse: %s\n", ck2->expireStr);
+
+    printf("TestParse: %d", ck2->secure);
 
 }
 

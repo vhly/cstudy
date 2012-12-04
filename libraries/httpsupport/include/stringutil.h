@@ -26,4 +26,12 @@ time_t ParseGMTTime(char *gmtStr);
  */
 int ConvertMonthToInt(char *monthName);
 
+/**
+ * Trim a string<br/>
+ * Remove head and last white space and crlf and tabs
+ * @param str char*, content to trim
+ * @return char* new str or orig
+ */
+char *TrimString(char *str);
+
 #endif
