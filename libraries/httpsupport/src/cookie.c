@@ -200,7 +200,9 @@ Cookie *ParseCookie(char *cookieStr) {
 
 		for (i = 0; i < slen; i++) {
 			ch = *(cookieStr + i);
-			if (ch == ';') {
+			if (ch == ' '){
+				continue;
+			}else if (ch == ';') {
 				eindex = i;
 				int dlen = eindex - sindex;
 
@@ -230,11 +232,11 @@ Cookie *ParseCookie(char *cookieStr) {
 
 				key = TrimString(key);
 
-				printf("CKParser: key %s\n", key);
+//				printf("CKParser: key %s\n", key);
 
 				if (value != NULL) {
 					value = TrimString(value);
-					printf("CKParser: value %s\n", value);
+//					printf("CKParser: value %s\n", value);
 				}
 
 				int cmp = -1;
