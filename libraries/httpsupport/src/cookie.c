@@ -40,16 +40,16 @@ char CookieIsExpired(Cookie *cookie)
     if (cookie != NULL) {
         ret = COOKIE_EXPIRE_NO;
         time_t t1 = time(NULL);
-        
+
         if (cookie->maxAge != 0 && cookie->receivedTime != 0) {
             long maxTime = cookie->receivedTime + cookie->maxAge;
-            if (t1 <= maxTime) {
+            if (t1 > maxTime) {
                 ret = COOKIE_EXPIRE_EXPIRED;
             }
         }else if (cookie->expireStr != NULL){
             time_t t2 = ParseGMTTime(cookie->expireStr);
             if (t2 > 0) {
-                if (t1 <= t2) {
+                if (t1 > t2) {
                     ret = COOKIE_EXPIRE_EXPIRED;
                 }
             }

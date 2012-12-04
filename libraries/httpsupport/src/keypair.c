@@ -55,14 +55,12 @@ KeyPairs GetKeyPairs(KeyPairs pairs, char *hName)
 {
     KeyPairs ret = NULL;
     if (pairs != NULL && hName != NULL) {
-        char found = 0;
         KeyPair *pair = FindLastPair(pairs);
         if (pair != NULL) {
             while (pair != NULL) {
                 if (pair->name != NULL) {
                     int cmp = strcmp(pair->name, hName);
                     if (cmp == 0) {
-                        found = 1;
                         if (ret == NULL) {
                             ret = CreateKeyPair(pair->name, pair->value);
                         } else {
@@ -126,7 +124,7 @@ char *PairToString(KeyPair *pair, char splitChar)
         size_t nlen, vlen;  // name length and value len
         char* name = pair->name;
         char* value = pair->value;
-        
+
         if (name != NULL && value != NULL) {
             nlen = strlen(name);
             vlen = strlen(value);
