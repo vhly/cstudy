@@ -15,6 +15,23 @@
 
 #include "stringutil.h"
 
+// Private funcations
+
+Cookie *FindFirstCookie(CookieStore cookies)
+{
+    Cookie *head = cookies;
+    while (head != NULL) {
+        if (head->prevSub != NULL) {
+            head = head->prevSub;
+        }else{
+            break;
+        }
+    }
+    
+    return head;
+}
+
+// Public functions
 Cookie *CreateCookie(char *name, char *value) {
 	Cookie *ret = NULL;
 	if (name != NULL) {
@@ -174,6 +191,70 @@ char *CookieToString(Cookie *cookie, char includeInfo) {
 	return ret;
 }
 
+char *CookieStreamToString(CookieStore cookies)
+{
+    char *ret = NULL;
+    if (cookies != NULL) {
+        Cookie *head = FindFirstCookie(cookies);
+        
+        int totalLen = 0;
+        
+        if (head != NULL) {
+            Cookie *tmp = head;
+            char *name;
+            char *value;
+            int nlen;
+            int vlen;
+            while (tmp != NULL) {
+                nlen = 0;
+                vlen = 0;
+                name = tmp->name;
+                value = tmp->value;
+                if (name != NULL) {
+                    nlen = strlen(name);
+                }
+                if (value != NULL) {
+                    vlen = strlen(value);
+                }
+                totalLen = totalLen + nlen + 1 + vlen + 1;  // " name=value;"
+                tmp = tmp->nextSub;
+            }
+            if (totalLen > 0 && totalLen < 1960) {
+                int tt = (sizeof(char)) * totalLen + 1;
+                ret = (char *)malloc(tt);
+                memset(ret, 0, tt);
+                
+                tmp = head;
+                char *buf = ret;
+                int index = 0;
+            
+                while (tmp != NULL) {
+                    nlen = 0;
+                    vlen = 0;
+                    
+                    name = tmp->name;
+                    value = tmp->value;
+                    nlen = strlen(name);
+                    if (value != NULL) {
+                        vlen = strlen(value);
+                        sprintf(buf, "%s=%s;", name, value); // TODO Check first key set.
+                    } else {
+                        sprintf(buf, "%s=;", name);
+                    }
+                    
+                    tmp = tmp->nextSub;
+                    
+                    index = index + nlen + 1 + vlen + 1;
+                    
+                    buf = buf + index;
+                }
+                
+            }
+        }
+    }
+    return ret;
+}
+
 Cookie *ParseCookie(char *cookieStr) {
 	// TODO Parse cookie string
 	Cookie *ret = NULL;
@@ -271,5 +352,54 @@ Cookie *ParseCookie(char *cookieStr) {
 		}
 	}
 	return ret;
+}
+
+CookieStore RemoveExpiredCookies(CookieStore cookies)
+{
+    CookieStore ret = cookies;
+    if (cookies != NULL) {
+        Cookie *head = FindFirstCookie(cookies);
+        
+        Cookie *tmp = head;
+        Cookie *prev, *next;
+        while (tmp != NULL) {
+            prev = NULL;
+            next = NULL;
+            char st = CookieIsExpired(tmp);
+            if (st == COOKIE_EXPIRE_EXPIRED) {
+                prev = tmp->prevSub;
+                next = tmp->nextSub;
+                if (prev != NULL) {
+                    prev->nextSub = next;
+                    
+                }
+                if (next != NULL) {
+                    next->prevSub = prev;
+                }
+                
+                if (prev != NULL) {
+                    tmp = prev;
+                    head = prev;
+                } else if( next != NULL){
+                    tmp = next;
+                    head = next;
+                } else {
+                    tmp = NULL;
+                    ret = NULL;
+                    head = NULL;
+                    break;
+                }
+            }else{
+                head = tmp; // for save cookie link list ref;
+                tmp = tmp->nextSub;
+            }
+        }
+        
+        if (head != NULL) {
+            ret = FindFirstCookie(head);
+        }
+        
+    }
+    return ret;
 }
 

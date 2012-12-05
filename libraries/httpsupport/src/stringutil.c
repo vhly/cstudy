@@ -9,6 +9,7 @@
 #include "stringutil.h"
 
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 
 time_t ParseGMTTime(char *gmtStr) {
@@ -113,7 +114,7 @@ char *TrimString(char *str) {
 		} else if(foundHead == foundLast){
 			// TODO process only one char str
 			int ssl = sizeof(char) + 1;
-			ret = (char *)(malloc(ssl));
+			ret = (char *)malloc(ssl);
 			memset(ret, 0, ssl);
 			strncpy(ret, (str + foundHead), 1);
 		} else if(foundHead == 0 && foundLast == slen - 1){
