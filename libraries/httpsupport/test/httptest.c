@@ -160,7 +160,10 @@ void TestCookieSupport()
     ncs = RemoveExpiredCookies(ck2);
     
     testAssertNull(ncs, "NCS must be null \n");
-
+    
+    Cookie *ck4 = ParseCookie("Key=value");
+    
+    testAssertNotNull(ck4, "CK4 must not be null\n");
 }
 
 int main(int argc, char *argv[]){

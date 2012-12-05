@@ -206,17 +206,16 @@ char *CookieStreamToString(CookieStore cookies)
             int nlen;
             int vlen;
             while (tmp != NULL) {
-                nlen = 0;
                 vlen = 0;
                 name = tmp->name;
                 value = tmp->value;
                 if (name != NULL) {
                     nlen = strlen(name);
+                    if (value != NULL) {
+                        vlen = strlen(value);
+                    }
+                    totalLen = totalLen + nlen + 1 + vlen + 1;  // " name=value;"
                 }
-                if (value != NULL) {
-                    vlen = strlen(value);
-                }
-                totalLen = totalLen + nlen + 1 + vlen + 1;  // " name=value;"
                 tmp = tmp->nextSub;
             }
             if (totalLen > 0 && totalLen < 1960) {
@@ -229,24 +228,22 @@ char *CookieStreamToString(CookieStore cookies)
                 int index = 0;
             
                 while (tmp != NULL) {
-                    nlen = 0;
                     vlen = 0;
                     
                     name = tmp->name;
                     value = tmp->value;
-                    nlen = strlen(name);
-                    if (value != NULL) {
-                        vlen = strlen(value);
-                        sprintf(buf, "%s=%s;", name, value); // TODO Check first key set.
-                    } else {
-                        sprintf(buf, "%s=;", name);
+                    if (name != NULL) {
+                        nlen = strlen(name);
+                        if (value != NULL) {
+                            vlen = strlen(value);
+                            sprintf(buf, "%s=%s;", name, value); // TODO Check first key set.
+                        } else {
+                            sprintf(buf, "%s=;", name);
+                        }
+                        index = index + nlen + 1 + vlen + 1;
+                        buf = buf + index;
                     }
-                    
                     tmp = tmp->nextSub;
-                    
-                    index = index + nlen + 1 + vlen + 1;
-                    
-                    buf = buf + index;
                 }
                 
             }
@@ -320,8 +317,6 @@ Cookie *ParseCookie(char *cookieStr) {
 //					printf("CKParser: value %s\n", value);
 				}
 
-				int cmp = -1;
-
 				if (strcasecmp("path", key) == 0) {
 					ret->path = value;
 				}else if (strcasecmp("expires", key) == 0) {
@@ -349,6 +344,47 @@ Cookie *ParseCookie(char *cookieStr) {
 
 		if (eindex == -1) {
 			// TODO process only key=value style.
+            value = strchr(cookieStr, '=');
+            
+            if (value != NULL) {
+                int blen = value - cookieStr;
+                key = (char *) (malloc(sizeof(char) * blen + 1));
+                memset(key, 0, sizeof(char) * blen + 1);
+                strncpy(key, cookieStr, blen);
+                value++; // skip '=' character.
+                blen = value - cookieStr;
+                if (blen == slen) {
+                    value = NULL;
+                }
+            } else {
+                key = cookieStr;
+            }
+            
+            key = TrimString(key);
+            
+            //				printf("CKParser: key %s\n", key);
+            
+            if (value != NULL) {
+                value = TrimString(value);
+                //					printf("CKParser: value %s\n", value);
+            }
+            
+            if (strcasecmp("path", key) == 0) {
+                ret->path = value;
+            }else if (strcasecmp("expires", key) == 0) {
+                ret->expireStr = value;
+            }else if (strcasecmp("domain", key) == 0) {
+                ret->domain = value;
+            }else if (strcasecmp("secure", key) == 0) {
+                ret->secure = 1;
+            }else if (strcasecmp("maxAge", key) == 0) {
+                int dd = 0;
+                sscanf(value, "%d", &dd);
+                ret->maxAge = dd;
+            }else {
+                ret->name = key;
+                ret->value = value;
+            }
 		}
 	}
 	return ret;
