@@ -2,6 +2,7 @@
 #include "httpheader.h"
 
 #include <stdio.h>
+#include <string.h>
 
 #include "stringutil.h"
 
@@ -27,6 +28,10 @@ void TestHttpHeader()
     HttpHeaders cks = GetHttpHeaders(headers, "Set-Cookie");
 
     testAssertNotNull(cks, "Cks must found\n");
+    
+    HttpHeader *h3 = ParseHttpHeader("Expires: Wed, 10 Dec 2012 09:01:32 GMT");
+    
+    testAssertNotNull(h3, "h3 must not be null\n");
 
 }
 
@@ -72,6 +77,13 @@ void TestStringUtil()
 
     printf("Trim: %s\n", ds);
     
+    char *ss = "This is a Good Library for Every developers";
+    
+    s1 = Substring(ss, 0, 4);
+    
+    testAssertNotNull(s1, "Substring: s1 must not be null\n");
+    
+    testAssertStringEquals("This", s1, "Substring: s1 must is This\n");
     
 }
 

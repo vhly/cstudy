@@ -11,13 +11,6 @@
 		D55AC76B165E1856000BC731 /* libhttpsupport.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D5F2D7D7165BCDB90045BEED /* libhttpsupport.a */; };
 		D5A7A981166C9F240022DEA3 /* stringutil.h in Headers */ = {isa = PBXBuildFile; fileRef = D5A7A980166C9F240022DEA3 /* stringutil.h */; };
 		D5A7A983166C9F6D0022DEA3 /* stringutil.c in Sources */ = {isa = PBXBuildFile; fileRef = D5A7A982166C9F6D0022DEA3 /* stringutil.c */; };
-		D5E153E0166F1E7700CDBBCD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5E153DF166F1E7700CDBBCD /* Foundation.framework */; };
-		D5E153E5166F1E7700CDBBCD /* httpsupport_ios.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = D5E153E4166F1E7700CDBBCD /* httpsupport_ios.h */; };
-		D5E153E7166F1E7700CDBBCD /* httpsupport_ios.m in Sources */ = {isa = PBXBuildFile; fileRef = D5E153E6166F1E7700CDBBCD /* httpsupport_ios.m */; };
-		D5E153EC166F1EA600CDBBCD /* httpheader.c in Sources */ = {isa = PBXBuildFile; fileRef = D5F2D7E2165BCDE80045BEED /* httpheader.c */; };
-		D5E153ED166F1EA600CDBBCD /* cookie.c in Sources */ = {isa = PBXBuildFile; fileRef = D5E4EAC7165BDBBE0051790B /* cookie.c */; };
-		D5E153EE166F1EA600CDBBCD /* keypair.c in Sources */ = {isa = PBXBuildFile; fileRef = D5ECFAD416661C1500633FD8 /* keypair.c */; };
-		D5E153EF166F1EA600CDBBCD /* stringutil.c in Sources */ = {isa = PBXBuildFile; fileRef = D5A7A982166C9F6D0022DEA3 /* stringutil.c */; };
 		D5E4EAC5165BDBA70051790B /* cookie.h in Headers */ = {isa = PBXBuildFile; fileRef = D5E4EAC4165BDBA70051790B /* cookie.h */; };
 		D5E4EAC8165BDBBE0051790B /* cookie.c in Sources */ = {isa = PBXBuildFile; fileRef = D5E4EAC7165BDBBE0051790B /* cookie.c */; };
 		D5ECFAD216661BFC00633FD8 /* keypair.h in Headers */ = {isa = PBXBuildFile; fileRef = D5ECFAD116661BFC00633FD8 /* keypair.h */; };
@@ -46,16 +39,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
-		D5E153DB166F1E7700CDBBCD /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "include/${PRODUCT_NAME}";
-			dstSubfolderSpec = 16;
-			files = (
-				D5E153E5166F1E7700CDBBCD /* httpsupport_ios.h in CopyFiles */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -64,7 +47,6 @@
 		D55AC76F165E1958000BC731 /* testdefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = testdefine.h; path = ../../test/testdefine.h; sourceTree = "<group>"; };
 		D5A7A980166C9F240022DEA3 /* stringutil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = stringutil.h; path = ../../include/stringutil.h; sourceTree = "<group>"; };
 		D5A7A982166C9F6D0022DEA3 /* stringutil.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = stringutil.c; path = ../../src/stringutil.c; sourceTree = "<group>"; };
-		D5E153DD166F1E7700CDBBCD /* libhttpsupport-ios.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libhttpsupport-ios.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5E153DF166F1E7700CDBBCD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D5E153E3166F1E7700CDBBCD /* httpsupport-ios-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "httpsupport-ios-Prefix.pch"; sourceTree = "<group>"; };
 		D5E153E4166F1E7700CDBBCD /* httpsupport_ios.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = httpsupport_ios.h; sourceTree = "<group>"; };
@@ -84,14 +66,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D55AC76B165E1856000BC731 /* libhttpsupport.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D5E153DA166F1E7700CDBBCD /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D5E153E0166F1E7700CDBBCD /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -157,7 +131,6 @@
 			children = (
 				D5F2D7D7165BCDB90045BEED /* libhttpsupport.a */,
 				D55AC75E165E1819000BC731 /* httptest */,
-				D5E153DD166F1E7700CDBBCD /* libhttpsupport-ios.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -219,23 +192,6 @@
 			productReference = D55AC75E165E1819000BC731 /* httptest */;
 			productType = "com.apple.product-type.tool";
 		};
-		D5E153DC166F1E7700CDBBCD /* httpsupport-ios */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = D5E153EA166F1E7700CDBBCD /* Build configuration list for PBXNativeTarget "httpsupport-ios" */;
-			buildPhases = (
-				D5E153D9166F1E7700CDBBCD /* Sources */,
-				D5E153DA166F1E7700CDBBCD /* Frameworks */,
-				D5E153DB166F1E7700CDBBCD /* CopyFiles */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "httpsupport-ios";
-			productName = "httpsupport-ios";
-			productReference = D5E153DD166F1E7700CDBBCD /* libhttpsupport-ios.a */;
-			productType = "com.apple.product-type.library.static";
-		};
 		D5F2D7D6165BCDB90045BEED /* httpsupport */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = D5F2D7DB165BCDB90045BEED /* Build configuration list for PBXNativeTarget "httpsupport" */;
@@ -276,7 +232,6 @@
 			targets = (
 				D5F2D7D6165BCDB90045BEED /* httpsupport */,
 				D55AC75D165E1819000BC731 /* httptest */,
-				D5E153DC166F1E7700CDBBCD /* httpsupport-ios */,
 			);
 		};
 /* End PBXProject section */
@@ -287,18 +242,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D55AC76A165E1846000BC731 /* httptest.c in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D5E153D9166F1E7700CDBBCD /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D5E153EC166F1EA600CDBBCD /* httpheader.c in Sources */,
-				D5E153ED166F1EA600CDBBCD /* cookie.c in Sources */,
-				D5E153EE166F1EA600CDBBCD /* keypair.c in Sources */,
-				D5E153EF166F1EA600CDBBCD /* stringutil.c in Sources */,
-				D5E153E7166F1E7700CDBBCD /* httpsupport_ios.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -335,37 +278,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
-		D5E153E8166F1E7700CDBBCD /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				DSTROOT = /tmp/httpsupport_ios.dst;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "httpsupport-ios/httpsupport-ios-Prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		D5E153E9166F1E7700CDBBCD /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				DSTROOT = /tmp/httpsupport_ios.dst;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "httpsupport-ios/httpsupport-ios-Prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
@@ -447,14 +359,6 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
-		};
-		D5E153EA166F1E7700CDBBCD /* Build configuration list for PBXNativeTarget "httpsupport-ios" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D5E153E8166F1E7700CDBBCD /* Debug */,
-				D5E153E9166F1E7700CDBBCD /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
 		};
 		D5F2D7D1165BCDB90045BEED /* Build configuration list for PBXProject "httpsupport" */ = {
 			isa = XCConfigurationList;

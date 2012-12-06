@@ -131,3 +131,25 @@ char *TrimString(char *str) {
 	}
 	return ret;
 }
+
+char *Substring(char *str, int offset, int len)
+{
+    char *ret = NULL;
+    if (str != NULL) {
+        int slen = strlen(str);
+        if (offset >= 0 && len <= slen && len >= 0 && offset < len) {
+            if (offset == 0 && len == slen) {
+                ret = str;
+            } else {
+                int ssd = len * (sizeof(char)) + 1;
+                ret = (char *)malloc(ssd);
+                memset(ret, 0, ssd);
+                
+                char *from = str + offset;
+                
+                strncpy(ret, from, len);
+            }
+        } // else is error parameter return NULL
+    }
+    return ret;
+}
