@@ -2,6 +2,7 @@
 #include "httpheader.h"
 
 #include <stdio.h>
+#include <string.h>
 
 #include "stringutil.h"
 
@@ -27,6 +28,10 @@ void TestHttpHeader()
     HttpHeaders cks = GetHttpHeaders(headers, "Set-Cookie");
 
     testAssertNotNull(cks, "Cks must found\n");
+    
+    HttpHeader *h3 = ParseHttpHeader("Expires: Wed, 10 Dec 2012 09:01:32 GMT");
+    
+    testAssertNotNull(h3, "h3 must not be null\n");
 
 }
 
@@ -71,6 +76,15 @@ void TestStringUtil()
     ds = TrimString(s1);
 
     printf("Trim: %s\n", ds);
+    
+    char *ss = "This is a Good Library for Every developers";
+    
+    s1 = Substring(ss, 0, 4);
+    
+    testAssertNotNull(s1, "Substring: s1 must not be null\n");
+    
+    testAssertStringEquals("This", s1, "Substring: s1 must is This\n");
+    
 }
 
 void TestCookieSupport()
@@ -107,7 +121,7 @@ void TestCookieSupport()
 
     ck1->path = "/";
 
-    ck1->expireStr = "Wen, 05 Dec 2012 09:01:42 GMT";
+    ck1->expireStr = "Wen, 01 Dec 2012 09:01:42 GMT";
 
     ck1->domain = ".baidu.com";
 
@@ -130,7 +144,38 @@ void TestCookieSupport()
     printf("TestParse: %s\n", ck2->expireStr);
 
     printf("TestParse: %d", ck2->secure);
-
+    
+    Cookie *ck3 = CreateCookie("ERROR", "Not Login");
+    
+    ck2->nextSub = ck3;
+    
+    ck3->prevSub = ck2;
+    
+   
+    char *acc = CookieStreamToString(ck2);
+    
+    printf("Stream Cookie: %s\n", acc);
+    
+    CookieStore ncs = RemoveExpiredCookies(ck2);
+    
+    testAssertNotNull(ncs, "NCS must not be null \n");
+    
+    
+    ck2->nextSub = ck3;
+    
+    ck3->prevSub = ck2;
+    
+    ck3->receivedTime = time(NULL) - 3000000;
+    
+    ck3->maxAge = 10;
+    
+    ncs = RemoveExpiredCookies(ck2);
+    
+    testAssertNull(ncs, "NCS must be null \n");
+    
+    Cookie *ck4 = ParseCookie("Key=value");
+    
+    testAssertNotNull(ck4, "CK4 must not be null\n");
 }
 
 int main(int argc, char *argv[]){

@@ -47,6 +47,10 @@
 		D55AC76F165E1958000BC731 /* testdefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = testdefine.h; path = ../../test/testdefine.h; sourceTree = "<group>"; };
 		D5A7A980166C9F240022DEA3 /* stringutil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = stringutil.h; path = ../../include/stringutil.h; sourceTree = "<group>"; };
 		D5A7A982166C9F6D0022DEA3 /* stringutil.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = stringutil.c; path = ../../src/stringutil.c; sourceTree = "<group>"; };
+		D5E153DF166F1E7700CDBBCD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D5E153E3166F1E7700CDBBCD /* httpsupport-ios-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "httpsupport-ios-Prefix.pch"; sourceTree = "<group>"; };
+		D5E153E4166F1E7700CDBBCD /* httpsupport_ios.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = httpsupport_ios.h; sourceTree = "<group>"; };
+		D5E153E6166F1E7700CDBBCD /* httpsupport_ios.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = httpsupport_ios.m; sourceTree = "<group>"; };
 		D5E4EAC4165BDBA70051790B /* cookie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cookie.h; path = ../../include/cookie.h; sourceTree = "<group>"; };
 		D5E4EAC7165BDBBE0051790B /* cookie.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = cookie.c; path = ../../src/cookie.c; sourceTree = "<group>"; };
 		D5ECFAD116661BFC00633FD8 /* keypair.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = keypair.h; path = ../../include/keypair.h; sourceTree = "<group>"; };
@@ -84,12 +88,40 @@
 			name = test;
 			sourceTree = "<group>";
 		};
+		D5E153DE166F1E7700CDBBCD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D5E153DF166F1E7700CDBBCD /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D5E153E1166F1E7700CDBBCD /* httpsupport-ios */ = {
+			isa = PBXGroup;
+			children = (
+				D5E153E4166F1E7700CDBBCD /* httpsupport_ios.h */,
+				D5E153E6166F1E7700CDBBCD /* httpsupport_ios.m */,
+				D5E153E2166F1E7700CDBBCD /* Supporting Files */,
+			);
+			path = "httpsupport-ios";
+			sourceTree = "<group>";
+		};
+		D5E153E2166F1E7700CDBBCD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D5E153E3166F1E7700CDBBCD /* httpsupport-ios-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		D5F2D7CC165BCDB90045BEED = {
 			isa = PBXGroup;
 			children = (
 				D55AC768165E182C000BC731 /* test */,
 				D5F2D7DF165BCDC70045BEED /* include */,
 				D5F2D7DE165BCDC10045BEED /* src */,
+				D5E153E1166F1E7700CDBBCD /* httpsupport-ios */,
+				D5E153DE166F1E7700CDBBCD /* Frameworks */,
 				D5F2D7D8165BCDB90045BEED /* Products */,
 			);
 			sourceTree = "<group>";

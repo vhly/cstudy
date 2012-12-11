@@ -49,5 +49,13 @@ void AppendHeader(HttpHeaders headers, HttpHeader *header);
 
 char *Header2String(HttpHeader *header, char needCRLF);
 
+/**
+ * Parse string to HttpHeader<br/>
+ * From Http Connection response, Http header format is "HeaderName: HeaderValue"
+ * @param headerStr char*, header content
+ * @return HttpHeader*
+ */
+HttpHeader *ParseHttpHeader(char *headerStr);
+
 #endif // httpsupport_httpheader_h
 

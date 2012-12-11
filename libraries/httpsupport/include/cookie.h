@@ -70,10 +70,25 @@ char CookieIsExpired(Cookie *cookie);
 char *CookieToString(Cookie *cookie, char includeInfo);
 
 /**
+ * Stream all cookies to a string buffer
+ * @param cookies CookieStore
+ * @return char* all cookie key=value; stream
+ */
+char *CookieStreamToString(CookieStore cookies);
+
+/**
  * Parse Cookie from string.
  * @param cookieStr char*, cookie str info.
  * @return Cookie* , Cookie instance.
  */
 Cookie *ParseCookie(char *cookieStr);
+
+/**
+ * Remove all expired Cookies from CookieStore<br/>
+ * You should use this function return value for next step process.
+ * @param cookies CookieStore orig cookies
+ * @return CookieStore new or orig
+ */
+CookieStore RemoveExpiredCookies(CookieStore cookies);
 
 #endif

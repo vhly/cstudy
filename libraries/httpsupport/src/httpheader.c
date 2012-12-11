@@ -12,6 +12,8 @@
 #include <stdlib.h>
 #include <string.h>
 
+#include "stringutil.h"
+
 // Private functions
 
 
@@ -61,6 +63,28 @@ char *Header2String(HttpHeader *header, char needCRLF)
                 }else{
                     sprintf(ret, "%s: %s", name, value);
                 }
+            }
+        }
+    }
+    return ret;
+}
+
+HttpHeader *ParseHttpHeader(char *headerStr)
+{
+    HttpHeader *ret = NULL;
+    if (headerStr != NULL) {
+        int len = strlen(headerStr);
+        if (len > 0) {
+            char *value = strchr(headerStr, ':');
+            
+            int hlen = value - headerStr;
+            
+            char *name = Substring(headerStr, 0, hlen);
+            
+            if (name != NULL && value != NULL) {
+                value = TrimString(value);
+                name = TrimString(name);
+                ret = CreateHttpHeader(name, value);
             }
         }
     }
