@@ -1,9 +1,14 @@
 //
-//  httprequest.c
+//  cookiemanager.h
 //  httpsupport
 //
 //  Created by vhly on 12-12-16.
 //  Copyright (c) 2012 vhly. All rights reserved.
 //
 
-#include "httprequest.h"
+#ifndef httpsupport_cookiemanager_h
+#define httpsupport_cookiemanager_h
+
+
+
+#endif

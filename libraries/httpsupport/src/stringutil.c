@@ -84,7 +84,7 @@ char *TrimString(char *str) {
 	if (str != NULL) {
 		char foundHead = -1;
 		char foundLast = -1;
-		int slen = strlen(str);
+		size_t slen = strlen(str);
 
 		int i;
 
@@ -132,11 +132,11 @@ char *TrimString(char *str) {
 	return ret;
 }
 
-char *Substring(char *str, int offset, int len)
+char *Substring(char *str, int offset, size_t len)
 {
     char *ret = NULL;
     if (str != NULL) {
-        int slen = strlen(str);
+        size_t slen = strlen(str);
         if (offset >= 0 && len <= slen && len >= 0 && offset < len) {
             if (offset == 0 && len == slen) {
                 ret = str;
