@@ -8,7 +8,13 @@
 #ifndef common_bytestream_h
 #define common_bytestream_h
 
-
+typedef struct _ByteStream {
+    int dataLength;
+    char *buf;
+    
+    struct _ByteStream *prev;
+    struct _ByteStream *next;
+} *ByteStream;
 
 #endif
 

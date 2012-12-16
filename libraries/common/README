@@ -1,0 +1,8 @@
+Common Library
+
+Include:
+
+ByteStream for data stream
+DataStream for High Level stream operations
+    Like DataOutputStream and DataInputStream in Java.
+
