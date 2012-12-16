@@ -1,6 +1,7 @@
 #include <stdio.h>
 
 #include "bytestream.h"
+#include "datastream.h"
 
 int main(int argc, char *argv[])
 {
@@ -9,7 +10,8 @@ int main(int argc, char *argv[])
     for (int i = 1; i <= 10; i++) {
         data[i-1] = i;
     }
-    AppendByteData(stream, data, 1, 8);
-    AppendByteData(stream, data, 0, 5);
+    
+    WriteByteToStream(stream, 1);
+    
 	return 0;
 }
