@@ -1,14 +1,26 @@
 
-#include "httpheader.h"
-
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
+
+#include <netinet/in.h>
+
+#include <sys/socket.h>
+
+#include <netdb.h>
+
+#include <arpa/inet.h>
+
+#include "httpheader.h"
 
 #include "stringutil.h"
 
 #include "cookie.h"
 
+#include "socketclient.h"
+
 #include "testdefine.h"
+
 
 void TestHttpHeader()
 {
@@ -178,6 +190,44 @@ void TestCookieSupport()
     testAssertNotNull(ck4, "CK4 must not be null\n");
 }
 
+void TestSocket()
+{
+    struct hostent *host = gethostbyname("www.baidu.com");
+    printf("Host Name: %s\n", host->h_name);
+    char str[64];
+    inet_ntop(host->h_addrtype, host->h_addr, str, 64);
+    printf("Host IP: %s\n", str);
+    
+    int sock = socket(AF_INET, SOCK_STREAM, 0);
+    struct sockaddr_in *target = (struct sockaddr_in *)malloc(sizeof(struct sockaddr_in));
+    memset(target, 0, sizeof(struct sockaddr_in));
+    target->sin_family = AF_INET;
+    target->sin_port = htons(80);
+    target->sin_addr.s_addr = inet_addr(str);
+    
+    int ok = connect(sock, (struct sockaddr *)target, sizeof(struct sockaddr));
+    printf("Connect ret: %d\n", ok);
+    if (ok == -1) {
+        printf("Connect error!\n");
+    }else{
+        
+    }
+    shutdown(sock, 2);
+    
+    
+    SocketRequest *request = (SocketRequest *)malloc(sizeof(SocketRequest));
+    memset(request, 0, sizeof(SocketRequest));
+    request->hostName = "www.sina.com.cn";
+    request->port = 80;
+    
+    sock = ConnectSocket(request);
+    printf("Request Socket: %d\n", sock);
+    
+    if (sock != -1) {
+        shutdown(sock, 2);
+    }
+}
+
 int main(int argc, char *argv[]){
 	printf("HttpSupport Test:\n");
 
@@ -186,6 +236,8 @@ int main(int argc, char *argv[]){
     TestStringUtil();
 
     TestCookieSupport();
+    
+    TestSocket();
 
     return 0;
 }

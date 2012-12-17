@@ -11,6 +11,12 @@
 
 #include "httpheader.h"
 
+#include "urlsupport.h"
+
+#include "bytestream.h"
+
+#include "datastream.h"
+
 #define HTTP_METHOD_GET 1
 #define HTTP_METHOD_POST 2
 #define HTTP_METHOD_PUT 3
@@ -19,10 +25,21 @@
 
 
 typedef struct _HttpRequest {
-    char *url;
+    URL *url;
     int  method;
     HttpHeaders headers;
-    
-} *HttpRequest;
+    ByteStream body;
+} HttpRequest;
+
+HttpRequest *HttpGet(char *url);
+
+HttpRequest *HttpPost(char *url);
+
+HttpRequest *HttpPut(char *url);
+
+HttpRequest *HttpDelete(char *url);
+
+HttpRequest *HttpHead(char *url);
+
 
 #endif
