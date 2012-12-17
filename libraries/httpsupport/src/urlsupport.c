@@ -15,6 +15,11 @@
 URL *ParseURL(char *url)
 {
     URL *ret = NULL;
-    
+    if (url != NULL) {
+        size_t slen = strlen(url);
+        if (slen > 0) {
+            
+        }
+    }
     return ret;
 }

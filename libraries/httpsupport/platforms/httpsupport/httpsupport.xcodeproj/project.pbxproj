@@ -20,10 +20,10 @@
 		D5491972167EF11F00CE2425 /* datastream.c in Sources */ = {isa = PBXBuildFile; fileRef = D5491970167EF11F00CE2425 /* datastream.c */; };
 		D5491974167EF4CB00CE2425 /* urlsupport.h in Headers */ = {isa = PBXBuildFile; fileRef = D5491973167EF4CB00CE2425 /* urlsupport.h */; };
 		D5491976167EF4DE00CE2425 /* urlsupport.c in Sources */ = {isa = PBXBuildFile; fileRef = D5491975167EF4DE00CE2425 /* urlsupport.c */; };
+		D5491978167EFC1800CE2425 /* stringutil.h in Headers */ = {isa = PBXBuildFile; fileRef = D5491977167EFC1800CE2425 /* stringutil.h */; };
+		D549197A167EFC2200CE2425 /* stringutil.c in Sources */ = {isa = PBXBuildFile; fileRef = D5491979167EFC2200CE2425 /* stringutil.c */; };
 		D55AC76A165E1846000BC731 /* httptest.c in Sources */ = {isa = PBXBuildFile; fileRef = D55AC769165E1846000BC731 /* httptest.c */; };
 		D55AC76B165E1856000BC731 /* libhttpsupport.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D5F2D7D7165BCDB90045BEED /* libhttpsupport.a */; };
-		D5A7A981166C9F240022DEA3 /* stringutil.h in Headers */ = {isa = PBXBuildFile; fileRef = D5A7A980166C9F240022DEA3 /* stringutil.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D5A7A983166C9F6D0022DEA3 /* stringutil.c in Sources */ = {isa = PBXBuildFile; fileRef = D5A7A982166C9F6D0022DEA3 /* stringutil.c */; };
 		D5AD3AA6167CDCE600AAAB8B /* httprequest.h in Headers */ = {isa = PBXBuildFile; fileRef = D5AD3AA5167CDCE600AAAB8B /* httprequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D5AD3AA9167CDD0500AAAB8B /* httpresponse.h in Headers */ = {isa = PBXBuildFile; fileRef = D5AD3AA8167CDD0500AAAB8B /* httpresponse.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D5AD3AAB167CDD2000AAAB8B /* httprequest.c in Sources */ = {isa = PBXBuildFile; fileRef = D5AD3AAA167CDD2000AAAB8B /* httprequest.c */; };
@@ -71,11 +71,11 @@
 		D5491970167EF11F00CE2425 /* datastream.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = datastream.c; sourceTree = "<group>"; };
 		D5491973167EF4CB00CE2425 /* urlsupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = urlsupport.h; path = ../../include/urlsupport.h; sourceTree = "<group>"; };
 		D5491975167EF4DE00CE2425 /* urlsupport.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = urlsupport.c; path = ../../src/urlsupport.c; sourceTree = "<group>"; };
+		D5491977167EFC1800CE2425 /* stringutil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stringutil.h; sourceTree = "<group>"; };
+		D5491979167EFC2200CE2425 /* stringutil.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = stringutil.c; sourceTree = "<group>"; };
 		D55AC75E165E1819000BC731 /* httptest */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = httptest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D55AC769165E1846000BC731 /* httptest.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = httptest.c; path = ../../test/httptest.c; sourceTree = "<group>"; };
 		D55AC76F165E1958000BC731 /* testdefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = testdefine.h; path = ../../test/testdefine.h; sourceTree = "<group>"; };
-		D5A7A980166C9F240022DEA3 /* stringutil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = stringutil.h; path = ../../include/stringutil.h; sourceTree = "<group>"; };
-		D5A7A982166C9F6D0022DEA3 /* stringutil.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = stringutil.c; path = ../../src/stringutil.c; sourceTree = "<group>"; };
 		D5AD3AA5167CDCE600AAAB8B /* httprequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = httprequest.h; path = ../../include/httprequest.h; sourceTree = "<group>"; };
 		D5AD3AA8167CDD0500AAAB8B /* httpresponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = httpresponse.h; path = ../../include/httpresponse.h; sourceTree = "<group>"; };
 		D5AD3AAA167CDD2000AAAB8B /* httprequest.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = httprequest.c; path = ../../src/httprequest.c; sourceTree = "<group>"; };
@@ -114,8 +114,8 @@
 		D5491968167EF0F500CE2425 /* common libs */ = {
 			isa = PBXGroup;
 			children = (
-				D549196E167EF11F00CE2425 /* src */,
 				D5491969167EF11000CE2425 /* include */,
+				D549196E167EF11F00CE2425 /* src */,
 			);
 			name = "common libs";
 			sourceTree = "<group>";
@@ -123,6 +123,7 @@
 		D5491969167EF11000CE2425 /* include */ = {
 			isa = PBXGroup;
 			children = (
+				D5491977167EFC1800CE2425 /* stringutil.h */,
 				D549196A167EF11000CE2425 /* bytestream.h */,
 				D549196B167EF11000CE2425 /* datastream.h */,
 			);
@@ -133,6 +134,7 @@
 		D549196E167EF11F00CE2425 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				D5491979167EFC2200CE2425 /* stringutil.c */,
 				D549196F167EF11F00CE2425 /* bytestream.c */,
 				D5491970167EF11F00CE2425 /* datastream.c */,
 			);
@@ -203,7 +205,6 @@
 				D5F2D7E2165BCDE80045BEED /* httpheader.c */,
 				D5E4EAC7165BDBBE0051790B /* cookie.c */,
 				D5ECFAD416661C1500633FD8 /* keypair.c */,
-				D5A7A982166C9F6D0022DEA3 /* stringutil.c */,
 				D5AD3AAA167CDD2000AAAB8B /* httprequest.c */,
 				D50E453D167DCA7D00C6B8FE /* stringhashtable.c */,
 				D50E453F167DCA9900C6B8FE /* httpresponse.c */,
@@ -220,7 +221,6 @@
 				D5F2D7E0165BCDDA0045BEED /* httpheader.h */,
 				D5E4EAC4165BDBA70051790B /* cookie.h */,
 				D5ECFAD116661BFC00633FD8 /* keypair.h */,
-				D5A7A980166C9F240022DEA3 /* stringutil.h */,
 				D5AD3AA5167CDCE600AAAB8B /* httprequest.h */,
 				D5AD3AA8167CDD0500AAAB8B /* httpresponse.h */,
 				D50E453A167DCA6700C6B8FE /* stringhashtable.h */,
@@ -241,7 +241,6 @@
 				D5F2D7E1165BCDDA0045BEED /* httpheader.h in Headers */,
 				D5E4EAC5165BDBA70051790B /* cookie.h in Headers */,
 				D5ECFAD216661BFC00633FD8 /* keypair.h in Headers */,
-				D5A7A981166C9F240022DEA3 /* stringutil.h in Headers */,
 				D5AD3AA6167CDCE600AAAB8B /* httprequest.h in Headers */,
 				D5AD3AA9167CDD0500AAAB8B /* httpresponse.h in Headers */,
 				D50E453B167DCA6700C6B8FE /* stringhashtable.h in Headers */,
@@ -250,6 +249,7 @@
 				D549196C167EF11000CE2425 /* bytestream.h in Headers */,
 				D549196D167EF11000CE2425 /* datastream.h in Headers */,
 				D5491974167EF4CB00CE2425 /* urlsupport.h in Headers */,
+				D5491978167EFC1800CE2425 /* stringutil.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,7 +334,6 @@
 				D5F2D7E3165BCDE80045BEED /* httpheader.c in Sources */,
 				D5E4EAC8165BDBBE0051790B /* cookie.c in Sources */,
 				D5ECFAD516661C1500633FD8 /* keypair.c in Sources */,
-				D5A7A983166C9F6D0022DEA3 /* stringutil.c in Sources */,
 				D5AD3AAB167CDD2000AAAB8B /* httprequest.c in Sources */,
 				D50E453E167DCA7D00C6B8FE /* stringhashtable.c in Sources */,
 				D50E4540167DCA9900C6B8FE /* httpresponse.c in Sources */,
@@ -343,6 +342,7 @@
 				D5491971167EF11F00CE2425 /* bytestream.c in Sources */,
 				D5491972167EF11F00CE2425 /* datastream.c in Sources */,
 				D5491976167EF4DE00CE2425 /* urlsupport.c in Sources */,
+				D549197A167EFC2200CE2425 /* stringutil.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
