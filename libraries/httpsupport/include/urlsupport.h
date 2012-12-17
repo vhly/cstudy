@@ -15,6 +15,7 @@ typedef struct _URL{
     int  port;
     char *path;
     char *file;
+    char *query;
     char *fragment;
 } URL;
 

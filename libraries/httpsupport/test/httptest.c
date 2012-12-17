@@ -19,6 +19,8 @@
 
 #include "socketclient.h"
 
+#include "urlsupport.h"
+
 #include "testdefine.h"
 
 
@@ -228,6 +230,21 @@ void TestSocket()
     }
 }
 
+void TestURLSupport()
+{
+    ParseURL("http://www.google.com.hk/");
+    ParseURL("http://www.google.com.hk");
+    ParseURL("http://www.google.com.hk/?t=1");
+    ParseURL("http://www.google.com.hk/?t=1#asd");
+    ParseURL("http://www.google.com.hk/image/search?q=Java");
+    ParseURL("http://www.google.com.hk/image/search.cgi?q=Java");
+    ParseURL("http://www.google.com.hk/image/search.cgi?q=Java#fkk");
+    ParseURL("http://www.google.com.hk/image/search.cgi#hello");
+    ParseURL("http://www.google.com.hk/image/search.cgi#hello?q=java");
+    ParseURL("https://www.google.com.hk/image/search.cgi#hello?q=java");
+    ParseURL("www.google.com.hk/image/search.cgi#hello?q=java");
+}
+
 int main(int argc, char *argv[]){
 	printf("HttpSupport Test:\n");
 
@@ -238,6 +255,8 @@ int main(int argc, char *argv[]){
     TestCookieSupport();
     
     TestSocket();
+    
+    TestURLSupport();
 
     return 0;
 }

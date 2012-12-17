@@ -137,7 +137,7 @@ char *Substring(char *str, int offset, size_t len)
     char *ret = NULL;
     if (str != NULL) {
         size_t slen = strlen(str);
-        if (offset >= 0 && len <= slen && len >= 0 && offset < len) {
+        if (offset >= 0 && len <= slen && len >= 0 && len + offset <= slen) {
             if (offset == 0 && len == slen) {
                 ret = str;
             } else {
