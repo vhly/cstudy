@@ -43,6 +43,6 @@ char *TrimString(char *str);
  * @param len  length for substring
  * @return char*, New string or NULL for error parameters
  */
-char *Substring(char *str, int offset, int len);
+char *Substring(char *str, int offset, size_t len);
 
 #endif

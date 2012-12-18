@@ -73,11 +73,11 @@ HttpHeader *ParseHttpHeader(char *headerStr)
 {
     HttpHeader *ret = NULL;
     if (headerStr != NULL) {
-        int len = strlen(headerStr);
+        size_t len = strlen(headerStr);
         if (len > 0) {
             char *value = strchr(headerStr, ':');
             
-            int hlen = value - headerStr;
+            long hlen = value - headerStr;
             
             char *name = Substring(headerStr, 0, hlen);
             
