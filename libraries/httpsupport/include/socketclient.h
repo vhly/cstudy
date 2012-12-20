@@ -11,6 +11,8 @@
 
 #include <netinet/in.h>
 
+#include "bytestream.h"
+
 
 typedef struct _SocketRequest {
     char *hostName;
@@ -26,5 +28,22 @@ typedef struct _SocketRequest {
  * @return socket handle or -1 which has error
  */
 int ConnectSocket(SocketRequest *request);
+
+/**
+ * Send byte stream to Socket<br/>
+ * This funcation don't find stream header, it will read from current pointer address.
+ * @param sock int socket handler
+ * @param stream ByteStream byte array stream
+ * @return long send data length
+ */
+long SendDataToSocket(int sock, ByteStream stream);
+
+/**
+ * Received from socket, and append to buf (ByteStream instance)
+ * @param sock int socket handler
+ * @param buf ByteStream which data store from socket
+ * @return long receivde length
+ */
+long ReceiveDataFromSocket(int sock, ByteStream buf);
 
 #endif

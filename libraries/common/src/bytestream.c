@@ -50,6 +50,7 @@ ByteArrayBlock *CreateDefaultByteBlock()
     ret->dataLength = 0;
     ret->next = NULL;
     ret->prev = NULL;
+    ret->totalLength = BYTESTREAM_BUFFER_LENGTH;
     return ret;
 }
 
@@ -66,7 +67,7 @@ void CloseByteStream(ByteStream stream)
     }
 }
 
-ByteStream AppendByteData(ByteStream stream, char *data, int off, int length)
+ByteStream AppendByteData(ByteStream stream, char *data, int off, size_t length)
 {
     ByteStream ret = stream;
     if (stream != NULL) {

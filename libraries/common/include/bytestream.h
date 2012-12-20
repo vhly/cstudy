@@ -8,7 +8,9 @@
 #ifndef common_bytestream_h
 #define common_bytestream_h
 
-#define BYTESTREAM_BUFFER_LENGTH 128
+#define BYTESTREAM_BUFFER_LENGTH 3
+
+#include <stdio.h>
 
 typedef struct _ByteStream {
     
@@ -21,6 +23,10 @@ typedef struct _ByteStream {
      * current operation index.
      */
     int currentPos;
+    /**
+     * Default length for other scope use
+     */
+    int totalLength;
     
     struct _ByteStream *prev;
     struct _ByteStream *next;
@@ -40,7 +46,7 @@ ByteArrayBlock *CreateDefaultByteBlock();
  * @param length int data length
  * @return ByteStream current stream of new stream
  */
-ByteStream AppendByteData(ByteStream stream, char *data, int off, int length);
+ByteStream AppendByteData(ByteStream stream, char *data, int off, size_t length);
 
 /**
  * Release all stream block

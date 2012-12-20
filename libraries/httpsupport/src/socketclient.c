@@ -73,3 +73,39 @@ int ConnectSocket(SocketRequest *request)
     }
     return ret;
 }
+
+long SendDataToSocket(int sock, ByteStream stream)
+{
+    long ret = 0;
+    if (sock != 0 && stream != NULL) {
+        ByteArrayBlock *current = stream;
+        size_t st;
+        do{
+            st = send(sock, current->buf, current->dataLength, 0);
+            if (st == -1) {
+                break;
+            }
+            ret += current->dataLength;
+            current = current->next;
+            if (current == NULL) {
+                break;
+            }
+        }while (1);
+    }
+    return ret;
+}
+
+long ReceiveDataFromSocket(int sock, ByteStream buf)
+{
+    long ret = -1;
+    if (sock != 0 && buf != NULL) {
+        size_t dlen = 1024*(sizeof(char));
+        char *data = (char *)malloc(dlen);
+        size_t st = recv(sock, data, dlen, 0);
+        if (st > 0) {
+            AppendByteData(buf, data, 0, st);
+            ret = st;
+        }
+    }
+    return ret;
+}

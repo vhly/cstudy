@@ -23,6 +23,8 @@
 
 #include "testdefine.h"
 
+#include "datastream.h"
+
 
 void TestHttpHeader()
 {
@@ -225,6 +227,21 @@ void TestSocket()
     sock = ConnectSocket(request);
     printf("Request Socket: %d\n", sock);
     
+    ByteStream stream = CreateDefaultByteBlock();
+    char *http = "GET / HTTP\\1.0\r\nHost: www.sina.com.cn\r\nConnection: close\r\n";
+    WriteBytesToStream(stream, http, strlen(http));
+    
+    SendDataToSocket(sock, stream);
+    
+    ByteStream resp = CreateDefaultByteBlock();
+    
+    long len = -1;
+    while (1) {
+        len = ReceiveDataFromSocket(sock, resp);
+        if (len == -1) {
+            break;
+        }
+    }
     if (sock != -1) {
         shutdown(sock, 2);
     }
@@ -248,6 +265,29 @@ void TestURLSupport()
     printf("URL: %s\n", surl);
 }
 
+void TestByteStream()
+{
+    ByteStream resp = CreateDefaultByteBlock();
+//    WriteInt32ToStream(resp, 123);
+//    WriteInt32ToStream(resp, 456);
+    
+    WriteShortToStream(resp, 24);
+    
+    WriteShortToStream(resp, 47);
+    
+    int sv = ReadShortFromStream(resp);
+    
+    testAssertEquals(24, sv, "Short must be 24.\n");
+    
+    sv = ReadShortFromStream(resp);
+    
+    testAssertEquals(47, sv, "Short must be 47.\n");
+    
+//    ReadBytesFromStream(resp, 4);
+    
+//    ReadByteFromStream(resp);
+}
+
 int main(int argc, char *argv[]){
 	printf("HttpSupport Test:\n");
 
@@ -260,6 +300,8 @@ int main(int argc, char *argv[]){
     TestSocket();
     
     TestURLSupport();
+    
+    TestByteStream();
 
     return 0;
 }
