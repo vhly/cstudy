@@ -238,11 +238,14 @@ void TestURLSupport()
     ParseURL("http://www.google.com.hk/?t=1#asd");
     ParseURL("http://www.google.com.hk/image/search?q=Java");
     ParseURL("http://www.google.com.hk/image/search.cgi?q=Java");
-    ParseURL("http://www.google.com.hk/image/search.cgi?q=Java#fkk");
     ParseURL("http://www.google.com.hk/image/search.cgi#hello");
     ParseURL("http://www.google.com.hk/image/search.cgi#hello?q=java");
     ParseURL("https://www.google.com.hk/image/search.cgi#hello?q=java");
     ParseURL("www.google.com.hk/image/search.cgi#hello?q=java");
+    
+    URL *url = ParseURL("http://www.google.com.hk/image/search.cgi?q=Java#fkk");
+    char *surl = URLtoString(url);
+    printf("URL: %s\n", surl);
 }
 
 int main(int argc, char *argv[]){

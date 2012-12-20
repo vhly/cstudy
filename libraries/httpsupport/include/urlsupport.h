@@ -26,4 +26,11 @@ typedef struct _URL{
  */
 URL *ParseURL(char *url);
 
+/**
+ * Convert URL object to string
+ * @param url URL*
+ * @return char* string or NULL
+ */
+char *URLtoString(URL *url);
+
 #endif

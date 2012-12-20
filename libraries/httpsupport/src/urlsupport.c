@@ -14,6 +14,55 @@
 
 #include "stringutil.h"
 
+// Private funcations
+
+size_t URLAddressLength(URL *url)
+{
+    size_t ret = 0;
+    if (url != NULL) {
+        
+        if (url->protocol == NULL) {
+            ret += 7; // apppend "http://"
+        } else {
+            ret += strlen(url->protocol);
+            ret += 3;
+        }
+
+        if (url->domian != NULL) {
+            ret += strlen(url->domian);
+        }
+
+        if (url->port > 0) {
+            char numBuf[32];
+            size_t portLen = 0;
+            sprintf(numBuf, "%d", url->port);
+            portLen = strlen(numBuf);
+            ret = ret + 1 + portLen;
+        }
+        
+        if (url->path != NULL) {
+            ret += strlen(url->path);
+        }
+        
+        if (url->file != NULL) {
+            ret += strlen(url->file);
+        }
+        
+        if (url->query != NULL) {
+            ret = ret + 1 + strlen(url->query);
+        }
+        
+        if (url->fragment != NULL) {
+            ret = ret + 1 + strlen(url->fragment);
+        }
+    }
+    return ret;
+}
+
+
+
+// Public functions
+
 URL *ParseURL(char *url)
 {
     URL *ret = NULL;
@@ -139,6 +188,63 @@ URL *ParseURL(char *url)
             
 //            printf("URL next part is %s\n", nextPart);
             
+        }
+    }
+    return ret;
+}
+
+char *URLtoString(URL *url)
+{
+    char *ret = NULL;
+    if (url != NULL) {
+        size_t slen = URLAddressLength(url);
+        if (slen > 0) {
+            size_t total = (slen + 1) * sizeof(char);
+            ret = (char *)malloc(total);
+            memset(ret, 0, total);
+            size_t currentIndex = 0;
+            if (url->protocol == NULL) {
+                sprintf(ret, "http://");
+                currentIndex = 7;
+            } else {
+                
+                sprintf((ret + currentIndex), "%s://", url->protocol);
+                currentIndex += strlen(url->protocol);
+                currentIndex += 3;
+            }
+            
+            if (url->domian != NULL) {
+                sprintf((ret + currentIndex), "%s", url->domian);
+                currentIndex += strlen(url->domian);
+            }
+            
+            if (url->port > 0) {
+                char numBuf[32];
+                size_t portLen = 0;
+                sprintf(numBuf, "%d", url->port);
+                portLen = strlen(numBuf);
+                sprintf((ret + currentIndex), ":%d", url->port);
+                currentIndex = currentIndex + 1 + portLen;
+            }
+            
+            if (url->path != NULL) {
+                sprintf((ret + currentIndex), "%s", url->path);
+                currentIndex += strlen(url->path);
+            }
+            
+            if (url->file != NULL) {
+                sprintf((ret + currentIndex), "%s", url->file);
+                currentIndex += strlen(url->file);
+            }
+            
+            if (url->query != NULL) {
+                sprintf((ret + currentIndex), "?%s", url->query);
+                currentIndex = currentIndex + 1 + strlen(url->query);
+            }
+            
+            if (url->fragment != NULL) {
+                sprintf((ret + currentIndex), "#%s", url->fragment);
+            }
         }
     }
     return ret;
