@@ -58,6 +58,8 @@ KeyPair *CreateKeyPair(char *hName, char *hValue);
  */
 void AppendToPairs(KeyPairs pairs, KeyPair *pair);
 
+void SetToPairs(KeyPairs pairs, KeyPair *pair);
+
 /**
  * Gen String define, split by splitChar between key and value
  * @param pair KeyPair instance

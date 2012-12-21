@@ -12,12 +12,42 @@
 #include <stdlib.h>
 #include <string.h>
 
+#include "urlsupport.h"
+
+// Private functions
+
+void InitDefaultHeader(HttpRequest *request)
+{
+    if (request != NULL) {
+        if (request->url != NULL) {
+            URL *uu = request->url;
+            char dd[16];
+            sprintf(dd, ":%d", uu->port);
+            size_t slen = strlen(dd);
+            slen += strlen(uu->domian);
+            slen++;
+            slen = slen * (sizeof(char));
+            char *host = (char *)malloc(slen);
+            memset(host, 0, slen);
+            sprintf(host, "%s:%d", uu->domian, uu->port);
+            HttpHeaders headers = CreateHttpHeader("Host", host);
+        }
+    }
+}
+
+// Public functions
+
 HttpRequest *CreateEmptyRequest(char *url)
 {
     HttpRequest *ret = NULL;
     if (url != NULL) {
         ret = (HttpRequest *)malloc(sizeof(HttpRequest));
         memset(ret, 0, sizeof(HttpRequest));
+        URL *u = ParseURL(url);
+        if (u != NULL) {
+            ret->url = u;
+            InitDefaultHeader(ret);
+        }
     }
     return ret;
 }
@@ -71,3 +101,18 @@ HttpRequest *HttpHead(char *url)
     }
     return ret;
 }
+
+void AppendHttpHeader(HttpRequest *req, HttpHeader *header)
+{
+    if (req != NULL && header != NULL) {
+        AppendHeader(req->headers, header);
+    }
+}
+
+void SetHttpHeader(HttpRequest *req, HttpHeader *header)
+{
+    if (header != NULL) {
+        
+    }
+}
+

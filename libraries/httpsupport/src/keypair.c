@@ -114,6 +114,13 @@ void AppendToPairs(KeyPairs pairs, KeyPair *pair)
     }
 }
 
+void SetToPairs(KeyPairs pairs, KeyPair *pair)
+{
+    if (pairs != NULL && pair != NULL) {
+        
+    }
+}
+
 char *PairToString(KeyPair *pair, char splitChar)
 {
     char *ret = NULL;
