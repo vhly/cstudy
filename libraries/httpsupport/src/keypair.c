@@ -12,6 +12,8 @@
 #include <stdlib.h>
 #include <string.h>
 
+// Private funcations
+
 KeyPair *FindLastPair(KeyPairs pairs)
 {
     KeyPair *ret = NULL;
@@ -27,6 +29,24 @@ KeyPair *FindLastPair(KeyPairs pairs)
     }
     return ret;
 }
+
+KeyPair *FindFirstPair(KeyPairs pairs)
+{
+    KeyPair *ret = NULL;
+    if (pairs != NULL) {
+        ret = pairs;
+        while (ret != NULL) {
+            if (ret->prev != NULL) {
+                ret = ret->prev;
+            } else {
+                break;
+            }
+        }
+    }
+    return ret;
+}
+
+// Public functions
 
 KeyPair *GetKeyPair(KeyPairs pairs, char *kName)
 {
@@ -117,7 +137,23 @@ void AppendToPairs(KeyPairs pairs, KeyPair *pair)
 void SetToPairs(KeyPairs pairs, KeyPair *pair)
 {
     if (pairs != NULL && pair != NULL) {
-        
+        char *tmpName;
+        char *pName = pair->name;
+        KeyPair *current = FindFirstPair(pairs);
+        int cmp;
+        int found = 0;
+        while (current != NULL) {
+            tmpName = current->name;
+            cmp = strcmp(tmpName, pName);
+            if (cmp == 0) {
+                current->value = pair->value;
+                found = 1;
+                break;
+            }
+        }
+        if (found == 0) {
+            AppendToPairs(pairs, pair);
+        }
     }
 }
 

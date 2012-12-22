@@ -44,6 +44,11 @@ void AppendHeader(HttpHeaders headers, HttpHeader *header)
     AppendToPairs(headers, header);
 }
 
+void SetHeader(HttpHeaders headers, HttpHeader *header)
+{
+    SetToPairs(headers, header);
+}
+
 char *Header2String(HttpHeader *header, char needCRLF)
 {
     char *ret = NULL;

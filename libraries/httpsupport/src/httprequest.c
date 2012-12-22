@@ -112,7 +112,7 @@ void AppendHttpHeader(HttpRequest *req, HttpHeader *header)
 void SetHttpHeader(HttpRequest *req, HttpHeader *header)
 {
     if (header != NULL) {
-        
+        SetHeader(req->headers, header);
     }
 }
 

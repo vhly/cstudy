@@ -47,6 +47,9 @@ HttpHeader *CreateHttpHeader(char *hName, char *hValue);
 
 void AppendHeader(HttpHeaders headers, HttpHeader *header);
 
+void SetHeader(HttpHeaders headers, HttpHeader *header);
+
+
 char *Header2String(HttpHeader *header, char needCRLF);
 
 /**
