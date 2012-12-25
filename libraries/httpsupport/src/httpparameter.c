@@ -8,4 +8,18 @@
 
 #include "httpparameter.h"
 
+#include <stdio.h>
 
+void AppendParameter(HttpParameters parameters, HttpParameter *parameter)
+{
+    if (parameters != NULL && parameter != NULL) {
+        AppendToPairs(parameters, parameter);
+    }
+}
+
+void SetParameter(HttpParameters parameters, HttpParameter *parameter)
+{
+    if (parameters != NULL && parameter != NULL) {
+        SetToPairs(parameters, parameter);
+    }
+}

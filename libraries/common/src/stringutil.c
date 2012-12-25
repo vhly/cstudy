@@ -153,3 +153,12 @@ char *Substring(char *str, int offset, size_t len)
     }
     return ret;
 }
+
+char *URLEncoding(char *str, int encodingType)
+{
+    char *ret = NULL;
+    if (str != NULL) {
+        
+    }
+    return ret;
+}

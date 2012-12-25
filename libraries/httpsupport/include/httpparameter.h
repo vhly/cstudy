@@ -13,4 +13,8 @@
 
 typedef KeyPair HttpParameter, *HttpParameters;
 
+void AppendParameter(HttpParameters parameters, HttpParameter *parameter);
+
+void SetParameter(HttpParameters parameters, HttpParameter *parameter);
+
 #endif

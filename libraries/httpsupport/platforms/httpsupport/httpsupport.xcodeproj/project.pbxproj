@@ -12,6 +12,8 @@
 		D50E4540167DCA9900C6B8FE /* httpresponse.c in Sources */ = {isa = PBXBuildFile; fileRef = D50E453F167DCA9900C6B8FE /* httpresponse.c */; };
 		D50E4542167DCDF100C6B8FE /* cookiemanager.h in Headers */ = {isa = PBXBuildFile; fileRef = D50E4541167DCDF100C6B8FE /* cookiemanager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D50E4544167DCE0200C6B8FE /* cookiemanager.c in Sources */ = {isa = PBXBuildFile; fileRef = D50E4543167DCE0200C6B8FE /* cookiemanager.c */; };
+		D51D739B168945F100506953 /* httpclient.h in Headers */ = {isa = PBXBuildFile; fileRef = D51D739A168945F100506953 /* httpclient.h */; };
+		D51D739E1689460200506953 /* httpclient.c in Sources */ = {isa = PBXBuildFile; fileRef = D51D739D1689460200506953 /* httpclient.c */; };
 		D5491964167EE3C100CE2425 /* socketclient.h in Headers */ = {isa = PBXBuildFile; fileRef = D5491963167EE3C100CE2425 /* socketclient.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D5491967167EE3D500CE2425 /* socketclient.c in Sources */ = {isa = PBXBuildFile; fileRef = D5491966167EE3D500CE2425 /* socketclient.c */; };
 		D549196C167EF11000CE2425 /* bytestream.h in Headers */ = {isa = PBXBuildFile; fileRef = D549196A167EF11000CE2425 /* bytestream.h */; };
@@ -65,6 +67,8 @@
 		D50E453F167DCA9900C6B8FE /* httpresponse.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = httpresponse.c; path = ../../src/httpresponse.c; sourceTree = "<group>"; };
 		D50E4541167DCDF100C6B8FE /* cookiemanager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cookiemanager.h; path = ../../include/cookiemanager.h; sourceTree = "<group>"; };
 		D50E4543167DCE0200C6B8FE /* cookiemanager.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = cookiemanager.c; path = ../../src/cookiemanager.c; sourceTree = "<group>"; };
+		D51D739A168945F100506953 /* httpclient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = httpclient.h; path = ../../include/httpclient.h; sourceTree = "<group>"; };
+		D51D739D1689460200506953 /* httpclient.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = httpclient.c; path = ../../src/httpclient.c; sourceTree = "<group>"; };
 		D5491963167EE3C100CE2425 /* socketclient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = socketclient.h; path = ../../include/socketclient.h; sourceTree = "<group>"; };
 		D5491966167EE3D500CE2425 /* socketclient.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = socketclient.c; path = ../../src/socketclient.c; sourceTree = "<group>"; };
 		D549196A167EF11000CE2425 /* bytestream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bytestream.h; sourceTree = "<group>"; };
@@ -216,6 +220,7 @@
 				D5491966167EE3D500CE2425 /* socketclient.c */,
 				D5491975167EF4DE00CE2425 /* urlsupport.c */,
 				D55BCC791685ABCD00E7DF29 /* httpparameter.c */,
+				D51D739D1689460200506953 /* httpclient.c */,
 			);
 			name = src;
 			sourceTree = "<group>";
@@ -233,6 +238,7 @@
 				D5491963167EE3C100CE2425 /* socketclient.h */,
 				D5491973167EF4CB00CE2425 /* urlsupport.h */,
 				D55BCC761685ABB500E7DF29 /* httpparameter.h */,
+				D51D739A168945F100506953 /* httpclient.h */,
 			);
 			name = include;
 			sourceTree = "<group>";
@@ -257,6 +263,7 @@
 				D5491974167EF4CB00CE2425 /* urlsupport.h in Headers */,
 				D5491978167EFC1800CE2425 /* stringutil.h in Headers */,
 				D55BCC771685ABB500E7DF29 /* httpparameter.h in Headers */,
+				D51D739B168945F100506953 /* httpclient.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -351,6 +358,7 @@
 				D5491976167EF4DE00CE2425 /* urlsupport.c in Sources */,
 				D549197A167EFC2200CE2425 /* stringutil.c in Sources */,
 				D55BCC7A1685ABCD00E7DF29 /* httpparameter.c in Sources */,
+				D51D739E1689460200506953 /* httpclient.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

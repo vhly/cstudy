@@ -116,3 +116,17 @@ void SetHttpHeader(HttpRequest *req, HttpHeader *header)
     }
 }
 
+void AppendHttpParameter(HttpRequest *req, HttpParameter *parameter)
+{
+    if (parameter != NULL) {
+        AppendParameter(req->parameters, parameter);
+    }
+}
+
+void SetHttpParameter(HttpRequest *req, HttpParameter *parameter)
+{
+    if (parameter != NULL) {
+        SetParameter(req->parameters, parameter);
+    }
+}
+

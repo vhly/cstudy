@@ -25,6 +25,8 @@
 
 #include "datastream.h"
 
+#include "httpclient.h"
+
 
 void TestHttpHeader()
 {

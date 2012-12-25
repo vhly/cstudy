@@ -9,6 +9,11 @@
 #ifndef httpsupport_stringutil_h
 #define httpsupport_stringutil_h
 
+#define URL_ENCODING_UTF8 0
+#define URL_ENCODING_GBK 1
+#define URL_ENCODING_GB2312 2
+
+
 #include <time.h>
 
 /**
@@ -44,5 +49,13 @@ char *TrimString(char *str);
  * @return char*, New string or NULL for error parameters
  */
 char *Substring(char *str, int offset, size_t len);
+
+/**
+ * Convert str to url encoding
+ * @param str char*
+ * @param encodingType int encoding type
+ * @return str encoded or null
+ */
+char *URLEncoding(char *str, int encodingType);
 
 #endif

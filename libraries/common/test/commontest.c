@@ -3,6 +3,8 @@
 #include "bytestream.h"
 #include "datastream.h"
 
+#include "stringutil.h"
+
 int main(int argc, char *argv[])
 {
     ByteStream stream = CreateDefaultByteBlock();
@@ -12,6 +14,8 @@ int main(int argc, char *argv[])
     }
     
     WriteByteToStream(stream, 1);
+    
+    URLEncoding("啊", URL_ENCODING_UTF8);
     
 	return 0;
 }

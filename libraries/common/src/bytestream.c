@@ -128,3 +128,8 @@ ByteStream AppendByteData(ByteStream stream, char *data, int off, size_t length)
     }
     return ret;
 }
+
+ByteStream SeekStream(ByteStream stream, int position, int seekFlag)
+{
+    return NULL;
+}

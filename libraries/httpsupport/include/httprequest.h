@@ -11,6 +11,8 @@
 
 #include "httpheader.h"
 
+#include "httpparameter.h"
+
 #include "urlsupport.h"
 
 #include "bytestream.h"
@@ -28,7 +30,9 @@ typedef struct _HttpRequest {
     URL *url;
     int  method;
     HttpHeaders headers;
+    HttpParameters parameters;
     ByteStream body;
+    
 } HttpRequest;
 
 HttpRequest *HttpGet(char *url);
@@ -44,5 +48,9 @@ HttpRequest *HttpHead(char *url);
 void AppendHttpHeader(HttpRequest *req, HttpHeader *header);
 
 void SetHttpHeader(HttpRequest *req, HttpHeader *header);
+
+void AppendHttpParameter(HttpRequest *req, HttpParameter *parameter);
+
+void SetHttpParameter(HttpRequest *req, HttpParameter *parameter);
 
 #endif

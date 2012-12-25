@@ -13,6 +13,13 @@
 
 #include <stdio.h>
 
+/**
+ * Get the first stream block and reset all I/O flag
+ * @param stream ByteStream
+ * @return ByteStream
+ */
+ByteStream CreateDefaultDataStream(ByteStream stream);
+
 void WriteByteToStream(ByteStream stream, char bv);
 
 void WriteShortToStream(ByteStream stream, int sv);

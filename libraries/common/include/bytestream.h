@@ -53,5 +53,7 @@ ByteStream AppendByteData(ByteStream stream, char *data, int off, size_t length)
  */
 void CloseByteStream(ByteStream stream);
 
+ByteStream SeekStream(ByteStream stream, int position, int seekFlag);
+
 #endif
 
