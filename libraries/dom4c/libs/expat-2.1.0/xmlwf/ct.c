@@ -96,6 +96,7 @@ getXMLCharset(const char *buf, char *charset)
   if (!p || *p != '/')
     return;
   p = getTok(&next);
+    int isXml = 0;
   if (matchkey(p, next, "xml"))
     isXml = 1;
   p = getTok(&next);

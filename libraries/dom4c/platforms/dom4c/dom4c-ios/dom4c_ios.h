@@ -8,6 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
+#include "dom4c.h"
+
 @interface dom4c_ios : NSObject
+
+-(void)Test;
 
 @end

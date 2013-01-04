@@ -12,7 +12,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include <expat.h>
+#include "expat.h"
 
 // Private functions
 

@@ -10,4 +10,9 @@
 
 @implementation dom4c_ios
 
+-(void)Test
+{
+
+}
+
 @end
