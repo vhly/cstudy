@@ -12,6 +12,8 @@
 #include <stdlib.h>
 #include <string.h>
 
+#include <expat.h>
+
 // Private functions
 
 Node *FindLastChild(Node *parent)
@@ -31,6 +33,15 @@ Node *FindLastChild(Node *parent)
 }
 
 // Public functions
+
+Element *ParseDocument()
+{
+    XML_Char *encoding = "UTF-8";
+    XML_Parser parser = XML_ParserCreate(encoding);
+    
+    XML_ParserFree(parser);
+    return NULL;
+}
 
 Node *CreateEmptyNode()
 {

@@ -11,6 +11,7 @@
 		D507A8AF1659E87A0015B8B7 /* stack.h in Headers */ = {isa = PBXBuildFile; fileRef = D507A8AE1659E87A0015B8B7 /* stack.h */; };
 		D524D3E3165A09D9007E9572 /* dom4c.c in Sources */ = {isa = PBXBuildFile; fileRef = D524D3E2165A09D9007E9572 /* dom4c.c */; };
 		D524D3E6165A09E3007E9572 /* dom4c.h in Headers */ = {isa = PBXBuildFile; fileRef = D524D3E5165A09E3007E9572 /* dom4c.h */; };
+		D5A613651696D23C005FBF09 /* libexpat.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D5A613621696D1F5005FBF09 /* libexpat.dylib */; };
 		D5DCCB9E165C7E3E00C027A4 /* domtest.c in Sources */ = {isa = PBXBuildFile; fileRef = D5DCCB9D165C7E3E00C027A4 /* domtest.c */; };
 		D5DCCB9F165C7EA700C027A4 /* libdom4c.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D507A89B1659E6E30015B8B7 /* libdom4c.a */; };
 /* End PBXBuildFile section */
@@ -44,6 +45,7 @@
 		D524D3E2165A09D9007E9572 /* dom4c.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = dom4c.c; path = ../../src/dom4c.c; sourceTree = "<group>"; };
 		D524D3E5165A09E3007E9572 /* dom4c.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dom4c.h; path = ../../include/dom4c.h; sourceTree = "<group>"; };
 		D56165F2165D175100EC87A8 /* testdefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = testdefine.h; path = ../../test/testdefine.h; sourceTree = "<group>"; };
+		D5A613621696D1F5005FBF09 /* libexpat.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libexpat.dylib; path = usr/lib/libexpat.dylib; sourceTree = SDKROOT; };
 		D5DCCB93165C7E1900C027A4 /* domtest */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = domtest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5DCCB9D165C7E3E00C027A4 /* domtest.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = domtest.c; path = ../../test/domtest.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -53,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5A613651696D23C005FBF09 /* libexpat.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,6 +73,7 @@
 		D507A8901659E6E20015B8B7 = {
 			isa = PBXGroup;
 			children = (
+				D5A613621696D1F5005FBF09 /* libexpat.dylib */,
 				D5DCCB8D165C7DF100C027A4 /* test */,
 				D507A8AB1659E8600015B8B7 /* include */,
 				D507A8AA1659E83F0015B8B7 /* src */,

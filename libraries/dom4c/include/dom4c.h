@@ -39,6 +39,8 @@ typedef Node Element;
 #pragma mark -
 #pragma mark Node Operation
 
+Element *ParseDocument();
+
 /**
  * Create empty node
  * @return Node empty node for operations
