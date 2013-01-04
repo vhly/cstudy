@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'dom4c-ios' target in the 'dom4c-ios' project
+//
+
+#ifdef __OBJC__
+    #import <Foundation/Foundation.h>
+#endif

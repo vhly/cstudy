@@ -32,12 +32,47 @@ Node *FindLastChild(Node *parent)
     return ret;
 }
 
+void DOM_ElementStart(void *userData,
+                      const XML_Char *name,
+                      const XML_Char **atts)
+{
+    
+}
+
+void DOM_ElementEnd(void *userData,
+                    const XML_Char *name)
+{
+    
+}
+
+void DOM_Character(void *userData,
+                   const XML_Char *s,
+                   int len)
+{
+    
+}
+
+void DOM_CDATAStart(void *userData)
+{
+    
+}
+
+void DOM_CDATAEnd(void *userData)
+{
+    
+}
+
+
 // Public functions
 
 Element *ParseDocument()
 {
     XML_Char *encoding = "UTF-8";
     XML_Parser parser = XML_ParserCreate(encoding);
+    
+    XML_SetElementHandler(parser, DOM_ElementStart, DOM_ElementEnd);
+    XML_SetCharacterDataHandler(parser, DOM_Character);
+    XML_SetCdataSectionHandler(parser, DOM_CDATAStart, DOM_CDATAEnd);
     
     XML_ParserFree(parser);
     return NULL;
