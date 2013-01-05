@@ -1,0 +1,9 @@
+//
+// Prefix header for all source files of the 'expat-ios' target in the 'expat-ios' project
+//
+
+#ifdef __OBJC__
+    #import <Foundation/Foundation.h>
+#endif
+
+#define MACOS_CLASSIC 1

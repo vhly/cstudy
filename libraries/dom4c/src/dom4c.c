@@ -36,13 +36,13 @@ void DOM_ElementStart(void *userData,
                       const XML_Char *name,
                       const XML_Char **atts)
 {
-    
+    printf("start %s\n", name);
 }
 
 void DOM_ElementEnd(void *userData,
                     const XML_Char *name)
 {
-    
+    printf("end %s\n", name);
 }
 
 void DOM_Character(void *userData,
@@ -73,6 +73,8 @@ Element *ParseDocument()
     XML_SetElementHandler(parser, DOM_ElementStart, DOM_ElementEnd);
     XML_SetCharacterDataHandler(parser, DOM_Character);
     XML_SetCdataSectionHandler(parser, DOM_CDATAStart, DOM_CDATAEnd);
+    char *xml = "<books><bk><t>The War</t></bk></books>";  // For Test
+    XML_Parse(parser, xml, strlen(xml), 1);
     
     XML_ParserFree(parser);
     return NULL;

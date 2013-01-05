@@ -1,5 +1,7 @@
 # C/C++ build files
 *.o
+*.lo
+*.la
 *.exe
 
 # Temp files

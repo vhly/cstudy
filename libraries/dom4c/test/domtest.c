@@ -166,6 +166,12 @@ void TestFind()
     
 }
 
+void TestParse()
+{
+    Element *ret = ParseDocument();
+    printf("Element Parse %ld\n", ret);
+}
+
 void TestDom()
 {
     TestNodeCreate();
@@ -173,6 +179,8 @@ void TestDom()
     TestAttribute();
     
     TestFind();
+    
+    TestParse();
 }
 
 int main(int argc, char *argv[]){

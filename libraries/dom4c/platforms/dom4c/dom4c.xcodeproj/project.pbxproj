@@ -11,76 +11,85 @@
 		D507A8AF1659E87A0015B8B7 /* stack.h in Headers */ = {isa = PBXBuildFile; fileRef = D507A8AE1659E87A0015B8B7 /* stack.h */; };
 		D524D3E3165A09D9007E9572 /* dom4c.c in Sources */ = {isa = PBXBuildFile; fileRef = D524D3E2165A09D9007E9572 /* dom4c.c */; };
 		D524D3E6165A09E3007E9572 /* dom4c.h in Headers */ = {isa = PBXBuildFile; fileRef = D524D3E5165A09E3007E9572 /* dom4c.h */; };
+		D53F6A5016984BA2003C8FD1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5A6136C1696D6D9005FBF09 /* Foundation.framework */; };
+		D53F6A5516984BA2003C8FD1 /* expat_ios.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = D53F6A5416984BA2003C8FD1 /* expat_ios.h */; };
+		D53F6A5716984BA2003C8FD1 /* expat_ios.m in Sources */ = {isa = PBXBuildFile; fileRef = D53F6A5616984BA2003C8FD1 /* expat_ios.m */; };
+		D53F6A5B16984BCF003C8FD1 /* expat_ios_config.h in Sources */ = {isa = PBXBuildFile; fileRef = D5A615701696DCC9005FBF09 /* expat_ios_config.h */; };
+		D53F6A5C16984BCF003C8FD1 /* ascii.h in Sources */ = {isa = PBXBuildFile; fileRef = D5A614DF1696D9FB005FBF09 /* ascii.h */; };
+		D53F6A5D16984BCF003C8FD1 /* asciitab.h in Sources */ = {isa = PBXBuildFile; fileRef = D5A614E01696D9FB005FBF09 /* asciitab.h */; };
+		D53F6A5E16984BCF003C8FD1 /* expat.h in Sources */ = {isa = PBXBuildFile; fileRef = D5A614E21696D9FB005FBF09 /* expat.h */; };
+		D53F6A5F16984BCF003C8FD1 /* expat_external.h in Sources */ = {isa = PBXBuildFile; fileRef = D5A614E31696D9FB005FBF09 /* expat_external.h */; };
+		D53F6A6016984BCF003C8FD1 /* iasciitab.h in Sources */ = {isa = PBXBuildFile; fileRef = D5A614E71696D9FB005FBF09 /* iasciitab.h */; };
+		D53F6A6116984BCF003C8FD1 /* internal.h in Sources */ = {isa = PBXBuildFile; fileRef = D5A614E81696D9FB005FBF09 /* internal.h */; };
+		D53F6A6216984BCF003C8FD1 /* latin1tab.h in Sources */ = {isa = PBXBuildFile; fileRef = D5A614E91696D9FB005FBF09 /* latin1tab.h */; };
+		D53F6A6316984BCF003C8FD1 /* macconfig.h in Sources */ = {isa = PBXBuildFile; fileRef = D5A614EC1696D9FB005FBF09 /* macconfig.h */; };
+		D53F6A6416984BCF003C8FD1 /* nametab.h in Sources */ = {isa = PBXBuildFile; fileRef = D5A614EE1696D9FB005FBF09 /* nametab.h */; };
+		D53F6A6516984BCF003C8FD1 /* utf8tab.h in Sources */ = {isa = PBXBuildFile; fileRef = D5A614EF1696D9FB005FBF09 /* utf8tab.h */; };
+		D53F6A6616984BCF003C8FD1 /* xmlparse.c in Sources */ = {isa = PBXBuildFile; fileRef = D5A614F11696D9FB005FBF09 /* xmlparse.c */; };
+		D53F6A6716984BCF003C8FD1 /* xmlrole.c in Sources */ = {isa = PBXBuildFile; fileRef = D5A614F21696D9FB005FBF09 /* xmlrole.c */; };
+		D53F6A6816984BCF003C8FD1 /* xmlrole.h in Sources */ = {isa = PBXBuildFile; fileRef = D5A614F31696D9FB005FBF09 /* xmlrole.h */; };
+		D53F6A6916984BCF003C8FD1 /* xmltok.c in Sources */ = {isa = PBXBuildFile; fileRef = D5A614F41696D9FB005FBF09 /* xmltok.c */; };
+		D53F6A6A16984BCF003C8FD1 /* xmltok.h in Sources */ = {isa = PBXBuildFile; fileRef = D5A614F51696D9FB005FBF09 /* xmltok.h */; };
+		D53F6A6B16984BCF003C8FD1 /* xmltok_impl.c in Sources */ = {isa = PBXBuildFile; fileRef = D5A614F61696D9FB005FBF09 /* xmltok_impl.c */; };
+		D53F6A6C16984BCF003C8FD1 /* xmltok_impl.h in Sources */ = {isa = PBXBuildFile; fileRef = D5A614F71696D9FB005FBF09 /* xmltok_impl.h */; };
+		D53F6A6D16984BCF003C8FD1 /* xmltok_ns.c in Sources */ = {isa = PBXBuildFile; fileRef = D5A614F81696D9FB005FBF09 /* xmltok_ns.c */; };
+		D53F6A6E16984BCF003C8FD1 /* codepage.c in Sources */ = {isa = PBXBuildFile; fileRef = D5A6151B1696D9FB005FBF09 /* codepage.c */; };
+		D53F6A6F16984BCF003C8FD1 /* codepage.h in Sources */ = {isa = PBXBuildFile; fileRef = D5A6151C1696D9FB005FBF09 /* codepage.h */; };
+		D53F6A7016984BCF003C8FD1 /* ct.c in Sources */ = {isa = PBXBuildFile; fileRef = D5A6151D1696D9FB005FBF09 /* ct.c */; };
+		D53F6A7116984BCF003C8FD1 /* filemap.h in Sources */ = {isa = PBXBuildFile; fileRef = D5A6151E1696D9FB005FBF09 /* filemap.h */; };
+		D53F6A7216984BCF003C8FD1 /* readfilemap.c in Sources */ = {isa = PBXBuildFile; fileRef = D5A6151F1696D9FB005FBF09 /* readfilemap.c */; };
+		D53F6A7316984BCF003C8FD1 /* unixfilemap.c in Sources */ = {isa = PBXBuildFile; fileRef = D5A615201696D9FB005FBF09 /* unixfilemap.c */; };
+		D53F6A7416984BCF003C8FD1 /* xmlfile.c in Sources */ = {isa = PBXBuildFile; fileRef = D5A615221696D9FB005FBF09 /* xmlfile.c */; };
+		D53F6A7516984BCF003C8FD1 /* xmlfile.h in Sources */ = {isa = PBXBuildFile; fileRef = D5A615231696D9FB005FBF09 /* xmlfile.h */; };
+		D53F6A7616984BCF003C8FD1 /* xmlmime.c in Sources */ = {isa = PBXBuildFile; fileRef = D5A615241696D9FB005FBF09 /* xmlmime.c */; };
+		D53F6A7716984BCF003C8FD1 /* xmlmime.h in Sources */ = {isa = PBXBuildFile; fileRef = D5A615251696D9FB005FBF09 /* xmlmime.h */; };
+		D53F6A7816984BCF003C8FD1 /* xmltchar.h in Sources */ = {isa = PBXBuildFile; fileRef = D5A615261696D9FB005FBF09 /* xmltchar.h */; };
+		D53F6A7916984BCF003C8FD1 /* xmlurl.h in Sources */ = {isa = PBXBuildFile; fileRef = D5A615271696D9FB005FBF09 /* xmlurl.h */; };
+		D53F6A7A16984BCF003C8FD1 /* xmlwf.c in Sources */ = {isa = PBXBuildFile; fileRef = D5A615281696D9FB005FBF09 /* xmlwf.c */; };
+		D53F6A7D16984CAE003C8FD1 /* libexpat-ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D53F6A4F16984BA2003C8FD1 /* libexpat-ios.a */; };
+		D53F6A7E16984D04003C8FD1 /* expat.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = D5A614E21696D9FB005FBF09 /* expat.h */; };
+		D53F6A7F16984D04003C8FD1 /* expat_external.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = D5A614E31696D9FB005FBF09 /* expat_external.h */; };
+		D53F6A8816984D67003C8FD1 /* ascii.h in Sources */ = {isa = PBXBuildFile; fileRef = D5A614DF1696D9FB005FBF09 /* ascii.h */; };
+		D53F6A8916984D67003C8FD1 /* asciitab.h in Sources */ = {isa = PBXBuildFile; fileRef = D5A614E01696D9FB005FBF09 /* asciitab.h */; };
+		D53F6A8A16984D67003C8FD1 /* expat.h in Sources */ = {isa = PBXBuildFile; fileRef = D5A614E21696D9FB005FBF09 /* expat.h */; };
+		D53F6A8B16984D67003C8FD1 /* expat_external.h in Sources */ = {isa = PBXBuildFile; fileRef = D5A614E31696D9FB005FBF09 /* expat_external.h */; };
+		D53F6A8C16984D67003C8FD1 /* iasciitab.h in Sources */ = {isa = PBXBuildFile; fileRef = D5A614E71696D9FB005FBF09 /* iasciitab.h */; };
+		D53F6A8D16984D67003C8FD1 /* internal.h in Sources */ = {isa = PBXBuildFile; fileRef = D5A614E81696D9FB005FBF09 /* internal.h */; };
+		D53F6A8E16984D67003C8FD1 /* latin1tab.h in Sources */ = {isa = PBXBuildFile; fileRef = D5A614E91696D9FB005FBF09 /* latin1tab.h */; };
+		D53F6A8F16984D67003C8FD1 /* macconfig.h in Sources */ = {isa = PBXBuildFile; fileRef = D5A614EC1696D9FB005FBF09 /* macconfig.h */; };
+		D53F6A9016984D67003C8FD1 /* nametab.h in Sources */ = {isa = PBXBuildFile; fileRef = D5A614EE1696D9FB005FBF09 /* nametab.h */; };
+		D53F6A9116984D67003C8FD1 /* utf8tab.h in Sources */ = {isa = PBXBuildFile; fileRef = D5A614EF1696D9FB005FBF09 /* utf8tab.h */; };
+		D53F6A9216984D67003C8FD1 /* xmlparse.c in Sources */ = {isa = PBXBuildFile; fileRef = D5A614F11696D9FB005FBF09 /* xmlparse.c */; };
+		D53F6A9316984D67003C8FD1 /* xmlrole.c in Sources */ = {isa = PBXBuildFile; fileRef = D5A614F21696D9FB005FBF09 /* xmlrole.c */; };
+		D53F6A9416984D67003C8FD1 /* xmlrole.h in Sources */ = {isa = PBXBuildFile; fileRef = D5A614F31696D9FB005FBF09 /* xmlrole.h */; };
+		D53F6A9516984D67003C8FD1 /* xmltok.c in Sources */ = {isa = PBXBuildFile; fileRef = D5A614F41696D9FB005FBF09 /* xmltok.c */; };
+		D53F6A9616984D67003C8FD1 /* xmltok.h in Sources */ = {isa = PBXBuildFile; fileRef = D5A614F51696D9FB005FBF09 /* xmltok.h */; };
+		D53F6A9716984D67003C8FD1 /* xmltok_impl.c in Sources */ = {isa = PBXBuildFile; fileRef = D5A614F61696D9FB005FBF09 /* xmltok_impl.c */; };
+		D53F6A9816984D67003C8FD1 /* xmltok_impl.h in Sources */ = {isa = PBXBuildFile; fileRef = D5A614F71696D9FB005FBF09 /* xmltok_impl.h */; };
+		D53F6A9916984D67003C8FD1 /* xmltok_ns.c in Sources */ = {isa = PBXBuildFile; fileRef = D5A614F81696D9FB005FBF09 /* xmltok_ns.c */; };
+		D53F6A9A16984D67003C8FD1 /* codepage.c in Sources */ = {isa = PBXBuildFile; fileRef = D5A6151B1696D9FB005FBF09 /* codepage.c */; };
+		D53F6A9B16984D67003C8FD1 /* codepage.h in Sources */ = {isa = PBXBuildFile; fileRef = D5A6151C1696D9FB005FBF09 /* codepage.h */; };
+		D53F6A9C16984D67003C8FD1 /* ct.c in Sources */ = {isa = PBXBuildFile; fileRef = D5A6151D1696D9FB005FBF09 /* ct.c */; };
+		D53F6A9D16984D67003C8FD1 /* filemap.h in Sources */ = {isa = PBXBuildFile; fileRef = D5A6151E1696D9FB005FBF09 /* filemap.h */; };
+		D53F6A9E16984D67003C8FD1 /* readfilemap.c in Sources */ = {isa = PBXBuildFile; fileRef = D5A6151F1696D9FB005FBF09 /* readfilemap.c */; };
+		D53F6A9F16984D67003C8FD1 /* unixfilemap.c in Sources */ = {isa = PBXBuildFile; fileRef = D5A615201696D9FB005FBF09 /* unixfilemap.c */; };
+		D53F6AA016984D67003C8FD1 /* xmlfile.c in Sources */ = {isa = PBXBuildFile; fileRef = D5A615221696D9FB005FBF09 /* xmlfile.c */; };
+		D53F6AA116984D67003C8FD1 /* xmlfile.h in Sources */ = {isa = PBXBuildFile; fileRef = D5A615231696D9FB005FBF09 /* xmlfile.h */; };
+		D53F6AA216984D67003C8FD1 /* xmlmime.c in Sources */ = {isa = PBXBuildFile; fileRef = D5A615241696D9FB005FBF09 /* xmlmime.c */; };
+		D53F6AA316984D67003C8FD1 /* xmlmime.h in Sources */ = {isa = PBXBuildFile; fileRef = D5A615251696D9FB005FBF09 /* xmlmime.h */; };
+		D53F6AA416984D67003C8FD1 /* xmltchar.h in Sources */ = {isa = PBXBuildFile; fileRef = D5A615261696D9FB005FBF09 /* xmltchar.h */; };
+		D53F6AA516984D67003C8FD1 /* xmlurl.h in Sources */ = {isa = PBXBuildFile; fileRef = D5A615271696D9FB005FBF09 /* xmlurl.h */; };
+		D53F6AA616984D67003C8FD1 /* xmlwf.c in Sources */ = {isa = PBXBuildFile; fileRef = D5A615281696D9FB005FBF09 /* xmlwf.c */; };
+		D53F6AA716984D75003C8FD1 /* expat.h in Headers */ = {isa = PBXBuildFile; fileRef = D5A614E21696D9FB005FBF09 /* expat.h */; };
+		D53F6AA816984D75003C8FD1 /* expat_external.h in Headers */ = {isa = PBXBuildFile; fileRef = D5A614E31696D9FB005FBF09 /* expat_external.h */; };
+		D53F6AA916984D94003C8FD1 /* libexpat-mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D53F6A8416984D54003C8FD1 /* libexpat-mac.a */; };
 		D5A6136D1696D6D9005FBF09 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5A6136C1696D6D9005FBF09 /* Foundation.framework */; };
 		D5A613721696D6D9005FBF09 /* dom4c_ios.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = D5A613711696D6D9005FBF09 /* dom4c_ios.h */; };
 		D5A613741696D6D9005FBF09 /* dom4c_ios.m in Sources */ = {isa = PBXBuildFile; fileRef = D5A613731696D6D9005FBF09 /* dom4c_ios.m */; };
-		D5A615431696D9FB005FBF09 /* ascii.h in Headers */ = {isa = PBXBuildFile; fileRef = D5A614DF1696D9FB005FBF09 /* ascii.h */; };
-		D5A615441696D9FB005FBF09 /* asciitab.h in Headers */ = {isa = PBXBuildFile; fileRef = D5A614E01696D9FB005FBF09 /* asciitab.h */; };
-		D5A615451696D9FB005FBF09 /* expat.h in Headers */ = {isa = PBXBuildFile; fileRef = D5A614E21696D9FB005FBF09 /* expat.h */; };
-		D5A615461696D9FB005FBF09 /* expat_external.h in Headers */ = {isa = PBXBuildFile; fileRef = D5A614E31696D9FB005FBF09 /* expat_external.h */; };
-		D5A615471696D9FB005FBF09 /* iasciitab.h in Headers */ = {isa = PBXBuildFile; fileRef = D5A614E71696D9FB005FBF09 /* iasciitab.h */; };
-		D5A615481696D9FB005FBF09 /* internal.h in Headers */ = {isa = PBXBuildFile; fileRef = D5A614E81696D9FB005FBF09 /* internal.h */; };
-		D5A615491696D9FB005FBF09 /* latin1tab.h in Headers */ = {isa = PBXBuildFile; fileRef = D5A614E91696D9FB005FBF09 /* latin1tab.h */; };
-		D5A6154A1696D9FB005FBF09 /* macconfig.h in Headers */ = {isa = PBXBuildFile; fileRef = D5A614EC1696D9FB005FBF09 /* macconfig.h */; };
-		D5A6154B1696D9FB005FBF09 /* nametab.h in Headers */ = {isa = PBXBuildFile; fileRef = D5A614EE1696D9FB005FBF09 /* nametab.h */; };
-		D5A6154C1696D9FB005FBF09 /* utf8tab.h in Headers */ = {isa = PBXBuildFile; fileRef = D5A614EF1696D9FB005FBF09 /* utf8tab.h */; };
-		D5A6154E1696D9FB005FBF09 /* xmlparse.c in Sources */ = {isa = PBXBuildFile; fileRef = D5A614F11696D9FB005FBF09 /* xmlparse.c */; };
-		D5A6154F1696D9FB005FBF09 /* xmlrole.c in Sources */ = {isa = PBXBuildFile; fileRef = D5A614F21696D9FB005FBF09 /* xmlrole.c */; };
-		D5A615501696D9FB005FBF09 /* xmlrole.h in Headers */ = {isa = PBXBuildFile; fileRef = D5A614F31696D9FB005FBF09 /* xmlrole.h */; };
-		D5A615511696D9FB005FBF09 /* xmltok.c in Sources */ = {isa = PBXBuildFile; fileRef = D5A614F41696D9FB005FBF09 /* xmltok.c */; };
-		D5A615521696D9FB005FBF09 /* xmltok.h in Headers */ = {isa = PBXBuildFile; fileRef = D5A614F51696D9FB005FBF09 /* xmltok.h */; };
-		D5A615531696D9FB005FBF09 /* xmltok_impl.c in Sources */ = {isa = PBXBuildFile; fileRef = D5A614F61696D9FB005FBF09 /* xmltok_impl.c */; };
-		D5A615541696D9FB005FBF09 /* xmltok_impl.h in Headers */ = {isa = PBXBuildFile; fileRef = D5A614F71696D9FB005FBF09 /* xmltok_impl.h */; };
-		D5A615551696D9FB005FBF09 /* xmltok_ns.c in Sources */ = {isa = PBXBuildFile; fileRef = D5A614F81696D9FB005FBF09 /* xmltok_ns.c */; };
-		D5A6155F1696D9FB005FBF09 /* codepage.c in Sources */ = {isa = PBXBuildFile; fileRef = D5A6151B1696D9FB005FBF09 /* codepage.c */; };
-		D5A615601696D9FB005FBF09 /* codepage.h in Headers */ = {isa = PBXBuildFile; fileRef = D5A6151C1696D9FB005FBF09 /* codepage.h */; };
-		D5A615611696D9FB005FBF09 /* ct.c in Sources */ = {isa = PBXBuildFile; fileRef = D5A6151D1696D9FB005FBF09 /* ct.c */; };
-		D5A615621696D9FB005FBF09 /* filemap.h in Headers */ = {isa = PBXBuildFile; fileRef = D5A6151E1696D9FB005FBF09 /* filemap.h */; };
-		D5A615631696D9FB005FBF09 /* readfilemap.c in Sources */ = {isa = PBXBuildFile; fileRef = D5A6151F1696D9FB005FBF09 /* readfilemap.c */; };
-		D5A615641696D9FB005FBF09 /* unixfilemap.c in Sources */ = {isa = PBXBuildFile; fileRef = D5A615201696D9FB005FBF09 /* unixfilemap.c */; };
-		D5A615661696D9FB005FBF09 /* xmlfile.c in Sources */ = {isa = PBXBuildFile; fileRef = D5A615221696D9FB005FBF09 /* xmlfile.c */; };
-		D5A615671696D9FB005FBF09 /* xmlfile.h in Headers */ = {isa = PBXBuildFile; fileRef = D5A615231696D9FB005FBF09 /* xmlfile.h */; };
-		D5A615681696D9FB005FBF09 /* xmlmime.c in Sources */ = {isa = PBXBuildFile; fileRef = D5A615241696D9FB005FBF09 /* xmlmime.c */; };
-		D5A615691696D9FB005FBF09 /* xmlmime.h in Headers */ = {isa = PBXBuildFile; fileRef = D5A615251696D9FB005FBF09 /* xmlmime.h */; };
-		D5A6156A1696D9FB005FBF09 /* xmltchar.h in Headers */ = {isa = PBXBuildFile; fileRef = D5A615261696D9FB005FBF09 /* xmltchar.h */; };
-		D5A6156B1696D9FB005FBF09 /* xmlurl.h in Headers */ = {isa = PBXBuildFile; fileRef = D5A615271696D9FB005FBF09 /* xmlurl.h */; };
-		D5A6156C1696D9FB005FBF09 /* xmlwf.c in Sources */ = {isa = PBXBuildFile; fileRef = D5A615281696D9FB005FBF09 /* xmlwf.c */; };
-		D5A615711696E094005FBF09 /* expat_ios_config.h in Sources */ = {isa = PBXBuildFile; fileRef = D5A615701696DCC9005FBF09 /* expat_ios_config.h */; };
-		D5A615721696E09D005FBF09 /* ascii.h in Sources */ = {isa = PBXBuildFile; fileRef = D5A614DF1696D9FB005FBF09 /* ascii.h */; };
-		D5A615731696E09D005FBF09 /* asciitab.h in Sources */ = {isa = PBXBuildFile; fileRef = D5A614E01696D9FB005FBF09 /* asciitab.h */; };
-		D5A615741696E09D005FBF09 /* expat.h in Sources */ = {isa = PBXBuildFile; fileRef = D5A614E21696D9FB005FBF09 /* expat.h */; };
-		D5A615751696E09D005FBF09 /* expat_external.h in Sources */ = {isa = PBXBuildFile; fileRef = D5A614E31696D9FB005FBF09 /* expat_external.h */; };
-		D5A615761696E09D005FBF09 /* iasciitab.h in Sources */ = {isa = PBXBuildFile; fileRef = D5A614E71696D9FB005FBF09 /* iasciitab.h */; };
-		D5A615771696E09D005FBF09 /* internal.h in Sources */ = {isa = PBXBuildFile; fileRef = D5A614E81696D9FB005FBF09 /* internal.h */; };
-		D5A615781696E09D005FBF09 /* latin1tab.h in Sources */ = {isa = PBXBuildFile; fileRef = D5A614E91696D9FB005FBF09 /* latin1tab.h */; };
-		D5A615791696E09D005FBF09 /* macconfig.h in Sources */ = {isa = PBXBuildFile; fileRef = D5A614EC1696D9FB005FBF09 /* macconfig.h */; };
-		D5A6157A1696E09D005FBF09 /* nametab.h in Sources */ = {isa = PBXBuildFile; fileRef = D5A614EE1696D9FB005FBF09 /* nametab.h */; };
-		D5A6157B1696E09D005FBF09 /* utf8tab.h in Sources */ = {isa = PBXBuildFile; fileRef = D5A614EF1696D9FB005FBF09 /* utf8tab.h */; };
-		D5A6157C1696E09D005FBF09 /* xmlparse.c in Sources */ = {isa = PBXBuildFile; fileRef = D5A614F11696D9FB005FBF09 /* xmlparse.c */; };
-		D5A6157D1696E09D005FBF09 /* xmlrole.c in Sources */ = {isa = PBXBuildFile; fileRef = D5A614F21696D9FB005FBF09 /* xmlrole.c */; };
-		D5A6157E1696E09D005FBF09 /* xmlrole.h in Sources */ = {isa = PBXBuildFile; fileRef = D5A614F31696D9FB005FBF09 /* xmlrole.h */; };
-		D5A6157F1696E09D005FBF09 /* xmltok.c in Sources */ = {isa = PBXBuildFile; fileRef = D5A614F41696D9FB005FBF09 /* xmltok.c */; };
-		D5A615801696E09D005FBF09 /* xmltok.h in Sources */ = {isa = PBXBuildFile; fileRef = D5A614F51696D9FB005FBF09 /* xmltok.h */; };
-		D5A615811696E09D005FBF09 /* xmltok_impl.c in Sources */ = {isa = PBXBuildFile; fileRef = D5A614F61696D9FB005FBF09 /* xmltok_impl.c */; };
-		D5A615821696E09D005FBF09 /* xmltok_impl.h in Sources */ = {isa = PBXBuildFile; fileRef = D5A614F71696D9FB005FBF09 /* xmltok_impl.h */; };
-		D5A615831696E09D005FBF09 /* xmltok_ns.c in Sources */ = {isa = PBXBuildFile; fileRef = D5A614F81696D9FB005FBF09 /* xmltok_ns.c */; };
 		D5A615841696E0E3005FBF09 /* dom4c.h in Sources */ = {isa = PBXBuildFile; fileRef = D524D3E5165A09E3007E9572 /* dom4c.h */; };
 		D5A615851696E0E3005FBF09 /* stack.h in Sources */ = {isa = PBXBuildFile; fileRef = D507A8AE1659E87A0015B8B7 /* stack.h */; };
 		D5A615861696E0E3005FBF09 /* dom4c.c in Sources */ = {isa = PBXBuildFile; fileRef = D524D3E2165A09D9007E9572 /* dom4c.c */; };
 		D5A615871696E0E3005FBF09 /* stack.c in Sources */ = {isa = PBXBuildFile; fileRef = D507A8AC1659E8700015B8B7 /* stack.c */; };
-		D5A615881696E0ED005FBF09 /* codepage.c in Sources */ = {isa = PBXBuildFile; fileRef = D5A6151B1696D9FB005FBF09 /* codepage.c */; };
-		D5A615891696E0ED005FBF09 /* codepage.h in Sources */ = {isa = PBXBuildFile; fileRef = D5A6151C1696D9FB005FBF09 /* codepage.h */; };
-		D5A6158A1696E0ED005FBF09 /* ct.c in Sources */ = {isa = PBXBuildFile; fileRef = D5A6151D1696D9FB005FBF09 /* ct.c */; };
-		D5A6158B1696E0ED005FBF09 /* filemap.h in Sources */ = {isa = PBXBuildFile; fileRef = D5A6151E1696D9FB005FBF09 /* filemap.h */; };
-		D5A6158C1696E0ED005FBF09 /* readfilemap.c in Sources */ = {isa = PBXBuildFile; fileRef = D5A6151F1696D9FB005FBF09 /* readfilemap.c */; };
-		D5A6158D1696E0ED005FBF09 /* unixfilemap.c in Sources */ = {isa = PBXBuildFile; fileRef = D5A615201696D9FB005FBF09 /* unixfilemap.c */; };
-		D5A6158E1696E0ED005FBF09 /* xmlfile.c in Sources */ = {isa = PBXBuildFile; fileRef = D5A615221696D9FB005FBF09 /* xmlfile.c */; };
-		D5A6158F1696E0ED005FBF09 /* xmlfile.h in Sources */ = {isa = PBXBuildFile; fileRef = D5A615231696D9FB005FBF09 /* xmlfile.h */; };
-		D5A615901696E0ED005FBF09 /* xmlmime.c in Sources */ = {isa = PBXBuildFile; fileRef = D5A615241696D9FB005FBF09 /* xmlmime.c */; };
-		D5A615911696E0ED005FBF09 /* xmlmime.h in Sources */ = {isa = PBXBuildFile; fileRef = D5A615251696D9FB005FBF09 /* xmlmime.h */; };
-		D5A615921696E0ED005FBF09 /* xmltchar.h in Sources */ = {isa = PBXBuildFile; fileRef = D5A615261696D9FB005FBF09 /* xmltchar.h */; };
-		D5A615931696E0ED005FBF09 /* xmlurl.h in Sources */ = {isa = PBXBuildFile; fileRef = D5A615271696D9FB005FBF09 /* xmlurl.h */; };
-		D5A615941696E0ED005FBF09 /* xmlwf.c in Sources */ = {isa = PBXBuildFile; fileRef = D5A615281696D9FB005FBF09 /* xmlwf.c */; };
 		D5A615951696E23A005FBF09 /* dom4c.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = D524D3E5165A09E3007E9572 /* dom4c.h */; };
 		D5A615961696E23A005FBF09 /* stack.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = D507A8AE1659E87A0015B8B7 /* stack.h */; };
 		D5DCCB9E165C7E3E00C027A4 /* domtest.c in Sources */ = {isa = PBXBuildFile; fileRef = D5DCCB9D165C7E3E00C027A4 /* domtest.c */; };
@@ -88,6 +97,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		D53F6A7B16984CA9003C8FD1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D507A8921659E6E20015B8B7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D53F6A4E16984BA2003C8FD1;
+			remoteInfo = "expat-ios";
+		};
+		D53F6AAA16984D9A003C8FD1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D507A8921659E6E20015B8B7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D53F6A8316984D54003C8FD1;
+			remoteInfo = "expat-mac";
+		};
 		D5DCCBA0165C7EAF00C027A4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D507A8921659E6E20015B8B7 /* Project object */;
@@ -98,6 +121,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		D53F6A4D16984BA2003C8FD1 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/${PRODUCT_NAME}";
+			dstSubfolderSpec = 16;
+			files = (
+				D53F6A7E16984D04003C8FD1 /* expat.h in CopyFiles */,
+				D53F6A7F16984D04003C8FD1 /* expat_external.h in CopyFiles */,
+				D53F6A5516984BA2003C8FD1 /* expat_ios.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D5A613681696D6D9005FBF09 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -127,6 +162,11 @@
 		D507A8AE1659E87A0015B8B7 /* stack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = stack.h; path = ../../include/stack.h; sourceTree = "<group>"; };
 		D524D3E2165A09D9007E9572 /* dom4c.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = dom4c.c; path = ../../src/dom4c.c; sourceTree = "<group>"; };
 		D524D3E5165A09E3007E9572 /* dom4c.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dom4c.h; path = ../../include/dom4c.h; sourceTree = "<group>"; };
+		D53F6A4F16984BA2003C8FD1 /* libexpat-ios.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libexpat-ios.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D53F6A5316984BA2003C8FD1 /* expat-ios-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "expat-ios-Prefix.pch"; sourceTree = "<group>"; };
+		D53F6A5416984BA2003C8FD1 /* expat_ios.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = expat_ios.h; sourceTree = "<group>"; };
+		D53F6A5616984BA2003C8FD1 /* expat_ios.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = expat_ios.m; sourceTree = "<group>"; };
+		D53F6A8416984D54003C8FD1 /* libexpat-mac.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libexpat-mac.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D56165F2165D175100EC87A8 /* testdefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = testdefine.h; path = ../../test/testdefine.h; sourceTree = "<group>"; };
 		D5A6136A1696D6D9005FBF09 /* libdom4c-ios.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libdom4c-ios.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5A6136C1696D6D9005FBF09 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -186,6 +226,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D53F6AA916984D94003C8FD1 /* libexpat-mac.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D53F6A4C16984BA2003C8FD1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D53F6A5016984BA2003C8FD1 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D53F6A8116984D54003C8FD1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -193,6 +249,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D53F6A7D16984CAE003C8FD1 /* libexpat-ios.a in Frameworks */,
 				D5A6136D1696D6D9005FBF09 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -216,6 +273,7 @@
 				D507A8AB1659E8600015B8B7 /* include */,
 				D507A8AA1659E83F0015B8B7 /* src */,
 				D5A6136E1696D6D9005FBF09 /* dom4c-ios */,
+				D53F6A5116984BA2003C8FD1 /* expat-ios */,
 				D5A6136B1696D6D9005FBF09 /* Frameworks */,
 				D507A89C1659E6E30015B8B7 /* Products */,
 			);
@@ -227,6 +285,8 @@
 				D507A89B1659E6E30015B8B7 /* libdom4c.a */,
 				D5DCCB93165C7E1900C027A4 /* domtest */,
 				D5A6136A1696D6D9005FBF09 /* libdom4c-ios.a */,
+				D53F6A4F16984BA2003C8FD1 /* libexpat-ios.a */,
+				D53F6A8416984D54003C8FD1 /* libexpat-mac.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -247,6 +307,24 @@
 				D507A8AE1659E87A0015B8B7 /* stack.h */,
 			);
 			name = include;
+			sourceTree = "<group>";
+		};
+		D53F6A5116984BA2003C8FD1 /* expat-ios */ = {
+			isa = PBXGroup;
+			children = (
+				D53F6A5416984BA2003C8FD1 /* expat_ios.h */,
+				D53F6A5616984BA2003C8FD1 /* expat_ios.m */,
+				D53F6A5216984BA2003C8FD1 /* Supporting Files */,
+			);
+			path = "expat-ios";
+			sourceTree = "<group>";
+		};
+		D53F6A5216984BA2003C8FD1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D53F6A5316984BA2003C8FD1 /* expat-ios-Prefix.pch */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		D5A6136B1696D6D9005FBF09 /* Frameworks */ = {
@@ -369,25 +447,15 @@
 			files = (
 				D507A8AF1659E87A0015B8B7 /* stack.h in Headers */,
 				D524D3E6165A09E3007E9572 /* dom4c.h in Headers */,
-				D5A615431696D9FB005FBF09 /* ascii.h in Headers */,
-				D5A615441696D9FB005FBF09 /* asciitab.h in Headers */,
-				D5A615451696D9FB005FBF09 /* expat.h in Headers */,
-				D5A615461696D9FB005FBF09 /* expat_external.h in Headers */,
-				D5A615471696D9FB005FBF09 /* iasciitab.h in Headers */,
-				D5A615481696D9FB005FBF09 /* internal.h in Headers */,
-				D5A615491696D9FB005FBF09 /* latin1tab.h in Headers */,
-				D5A6154A1696D9FB005FBF09 /* macconfig.h in Headers */,
-				D5A6154B1696D9FB005FBF09 /* nametab.h in Headers */,
-				D5A6154C1696D9FB005FBF09 /* utf8tab.h in Headers */,
-				D5A615501696D9FB005FBF09 /* xmlrole.h in Headers */,
-				D5A615521696D9FB005FBF09 /* xmltok.h in Headers */,
-				D5A615541696D9FB005FBF09 /* xmltok_impl.h in Headers */,
-				D5A615601696D9FB005FBF09 /* codepage.h in Headers */,
-				D5A615621696D9FB005FBF09 /* filemap.h in Headers */,
-				D5A615671696D9FB005FBF09 /* xmlfile.h in Headers */,
-				D5A615691696D9FB005FBF09 /* xmlmime.h in Headers */,
-				D5A6156A1696D9FB005FBF09 /* xmltchar.h in Headers */,
-				D5A6156B1696D9FB005FBF09 /* xmlurl.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D53F6A8216984D54003C8FD1 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D53F6AA716984D75003C8FD1 /* expat.h in Headers */,
+				D53F6AA816984D75003C8FD1 /* expat_external.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -405,10 +473,45 @@
 			buildRules = (
 			);
 			dependencies = (
+				D53F6AAB16984D9A003C8FD1 /* PBXTargetDependency */,
 			);
 			name = dom4c;
 			productName = dom4c;
 			productReference = D507A89B1659E6E30015B8B7 /* libdom4c.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		D53F6A4E16984BA2003C8FD1 /* expat-ios */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D53F6A5816984BA2003C8FD1 /* Build configuration list for PBXNativeTarget "expat-ios" */;
+			buildPhases = (
+				D53F6A4B16984BA2003C8FD1 /* Sources */,
+				D53F6A4C16984BA2003C8FD1 /* Frameworks */,
+				D53F6A4D16984BA2003C8FD1 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "expat-ios";
+			productName = "expat-ios";
+			productReference = D53F6A4F16984BA2003C8FD1 /* libexpat-ios.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		D53F6A8316984D54003C8FD1 /* expat-mac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D53F6A8516984D54003C8FD1 /* Build configuration list for PBXNativeTarget "expat-mac" */;
+			buildPhases = (
+				D53F6A8016984D54003C8FD1 /* Sources */,
+				D53F6A8116984D54003C8FD1 /* Frameworks */,
+				D53F6A8216984D54003C8FD1 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "expat-mac";
+			productName = "expat-mac";
+			productReference = D53F6A8416984D54003C8FD1 /* libexpat-mac.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		D5A613691696D6D9005FBF09 /* dom4c-ios */ = {
@@ -422,6 +525,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				D53F6A7C16984CA9003C8FD1 /* PBXTargetDependency */,
 			);
 			name = "dom4c-ios";
 			productName = "dom4c-ios";
@@ -470,6 +574,8 @@
 				D507A89A1659E6E20015B8B7 /* dom4c */,
 				D5DCCB92165C7E1900C027A4 /* domtest */,
 				D5A613691696D6D9005FBF09 /* dom4c-ios */,
+				D53F6A4E16984BA2003C8FD1 /* expat-ios */,
+				D53F6A8316984D54003C8FD1 /* expat-mac */,
 			);
 		};
 /* End PBXProject section */
@@ -481,18 +587,84 @@
 			files = (
 				D507A8AD1659E8700015B8B7 /* stack.c in Sources */,
 				D524D3E3165A09D9007E9572 /* dom4c.c in Sources */,
-				D5A6154E1696D9FB005FBF09 /* xmlparse.c in Sources */,
-				D5A6154F1696D9FB005FBF09 /* xmlrole.c in Sources */,
-				D5A615511696D9FB005FBF09 /* xmltok.c in Sources */,
-				D5A615531696D9FB005FBF09 /* xmltok_impl.c in Sources */,
-				D5A615551696D9FB005FBF09 /* xmltok_ns.c in Sources */,
-				D5A6155F1696D9FB005FBF09 /* codepage.c in Sources */,
-				D5A615611696D9FB005FBF09 /* ct.c in Sources */,
-				D5A615631696D9FB005FBF09 /* readfilemap.c in Sources */,
-				D5A615641696D9FB005FBF09 /* unixfilemap.c in Sources */,
-				D5A615661696D9FB005FBF09 /* xmlfile.c in Sources */,
-				D5A615681696D9FB005FBF09 /* xmlmime.c in Sources */,
-				D5A6156C1696D9FB005FBF09 /* xmlwf.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D53F6A4B16984BA2003C8FD1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D53F6A5B16984BCF003C8FD1 /* expat_ios_config.h in Sources */,
+				D53F6A5C16984BCF003C8FD1 /* ascii.h in Sources */,
+				D53F6A5D16984BCF003C8FD1 /* asciitab.h in Sources */,
+				D53F6A5E16984BCF003C8FD1 /* expat.h in Sources */,
+				D53F6A5F16984BCF003C8FD1 /* expat_external.h in Sources */,
+				D53F6A6016984BCF003C8FD1 /* iasciitab.h in Sources */,
+				D53F6A6116984BCF003C8FD1 /* internal.h in Sources */,
+				D53F6A6216984BCF003C8FD1 /* latin1tab.h in Sources */,
+				D53F6A6316984BCF003C8FD1 /* macconfig.h in Sources */,
+				D53F6A6416984BCF003C8FD1 /* nametab.h in Sources */,
+				D53F6A6516984BCF003C8FD1 /* utf8tab.h in Sources */,
+				D53F6A6616984BCF003C8FD1 /* xmlparse.c in Sources */,
+				D53F6A6716984BCF003C8FD1 /* xmlrole.c in Sources */,
+				D53F6A6816984BCF003C8FD1 /* xmlrole.h in Sources */,
+				D53F6A6916984BCF003C8FD1 /* xmltok.c in Sources */,
+				D53F6A6A16984BCF003C8FD1 /* xmltok.h in Sources */,
+				D53F6A6B16984BCF003C8FD1 /* xmltok_impl.c in Sources */,
+				D53F6A6C16984BCF003C8FD1 /* xmltok_impl.h in Sources */,
+				D53F6A6D16984BCF003C8FD1 /* xmltok_ns.c in Sources */,
+				D53F6A6E16984BCF003C8FD1 /* codepage.c in Sources */,
+				D53F6A6F16984BCF003C8FD1 /* codepage.h in Sources */,
+				D53F6A7016984BCF003C8FD1 /* ct.c in Sources */,
+				D53F6A7116984BCF003C8FD1 /* filemap.h in Sources */,
+				D53F6A7216984BCF003C8FD1 /* readfilemap.c in Sources */,
+				D53F6A7316984BCF003C8FD1 /* unixfilemap.c in Sources */,
+				D53F6A7416984BCF003C8FD1 /* xmlfile.c in Sources */,
+				D53F6A7516984BCF003C8FD1 /* xmlfile.h in Sources */,
+				D53F6A7616984BCF003C8FD1 /* xmlmime.c in Sources */,
+				D53F6A7716984BCF003C8FD1 /* xmlmime.h in Sources */,
+				D53F6A7816984BCF003C8FD1 /* xmltchar.h in Sources */,
+				D53F6A7916984BCF003C8FD1 /* xmlurl.h in Sources */,
+				D53F6A7A16984BCF003C8FD1 /* xmlwf.c in Sources */,
+				D53F6A5716984BA2003C8FD1 /* expat_ios.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D53F6A8016984D54003C8FD1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D53F6A8816984D67003C8FD1 /* ascii.h in Sources */,
+				D53F6A8916984D67003C8FD1 /* asciitab.h in Sources */,
+				D53F6A8A16984D67003C8FD1 /* expat.h in Sources */,
+				D53F6A8B16984D67003C8FD1 /* expat_external.h in Sources */,
+				D53F6A8C16984D67003C8FD1 /* iasciitab.h in Sources */,
+				D53F6A8D16984D67003C8FD1 /* internal.h in Sources */,
+				D53F6A8E16984D67003C8FD1 /* latin1tab.h in Sources */,
+				D53F6A8F16984D67003C8FD1 /* macconfig.h in Sources */,
+				D53F6A9016984D67003C8FD1 /* nametab.h in Sources */,
+				D53F6A9116984D67003C8FD1 /* utf8tab.h in Sources */,
+				D53F6A9216984D67003C8FD1 /* xmlparse.c in Sources */,
+				D53F6A9316984D67003C8FD1 /* xmlrole.c in Sources */,
+				D53F6A9416984D67003C8FD1 /* xmlrole.h in Sources */,
+				D53F6A9516984D67003C8FD1 /* xmltok.c in Sources */,
+				D53F6A9616984D67003C8FD1 /* xmltok.h in Sources */,
+				D53F6A9716984D67003C8FD1 /* xmltok_impl.c in Sources */,
+				D53F6A9816984D67003C8FD1 /* xmltok_impl.h in Sources */,
+				D53F6A9916984D67003C8FD1 /* xmltok_ns.c in Sources */,
+				D53F6A9A16984D67003C8FD1 /* codepage.c in Sources */,
+				D53F6A9B16984D67003C8FD1 /* codepage.h in Sources */,
+				D53F6A9C16984D67003C8FD1 /* ct.c in Sources */,
+				D53F6A9D16984D67003C8FD1 /* filemap.h in Sources */,
+				D53F6A9E16984D67003C8FD1 /* readfilemap.c in Sources */,
+				D53F6A9F16984D67003C8FD1 /* unixfilemap.c in Sources */,
+				D53F6AA016984D67003C8FD1 /* xmlfile.c in Sources */,
+				D53F6AA116984D67003C8FD1 /* xmlfile.h in Sources */,
+				D53F6AA216984D67003C8FD1 /* xmlmime.c in Sources */,
+				D53F6AA316984D67003C8FD1 /* xmlmime.h in Sources */,
+				D53F6AA416984D67003C8FD1 /* xmltchar.h in Sources */,
+				D53F6AA516984D67003C8FD1 /* xmlurl.h in Sources */,
+				D53F6AA616984D67003C8FD1 /* xmlwf.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -500,42 +672,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D5A615881696E0ED005FBF09 /* codepage.c in Sources */,
-				D5A615891696E0ED005FBF09 /* codepage.h in Sources */,
-				D5A6158A1696E0ED005FBF09 /* ct.c in Sources */,
-				D5A6158B1696E0ED005FBF09 /* filemap.h in Sources */,
-				D5A6158C1696E0ED005FBF09 /* readfilemap.c in Sources */,
-				D5A6158D1696E0ED005FBF09 /* unixfilemap.c in Sources */,
-				D5A6158E1696E0ED005FBF09 /* xmlfile.c in Sources */,
-				D5A6158F1696E0ED005FBF09 /* xmlfile.h in Sources */,
-				D5A615901696E0ED005FBF09 /* xmlmime.c in Sources */,
-				D5A615911696E0ED005FBF09 /* xmlmime.h in Sources */,
-				D5A615921696E0ED005FBF09 /* xmltchar.h in Sources */,
-				D5A615931696E0ED005FBF09 /* xmlurl.h in Sources */,
-				D5A615941696E0ED005FBF09 /* xmlwf.c in Sources */,
 				D5A615841696E0E3005FBF09 /* dom4c.h in Sources */,
 				D5A615851696E0E3005FBF09 /* stack.h in Sources */,
 				D5A615861696E0E3005FBF09 /* dom4c.c in Sources */,
 				D5A615871696E0E3005FBF09 /* stack.c in Sources */,
-				D5A615721696E09D005FBF09 /* ascii.h in Sources */,
-				D5A615731696E09D005FBF09 /* asciitab.h in Sources */,
-				D5A615741696E09D005FBF09 /* expat.h in Sources */,
-				D5A615751696E09D005FBF09 /* expat_external.h in Sources */,
-				D5A615761696E09D005FBF09 /* iasciitab.h in Sources */,
-				D5A615771696E09D005FBF09 /* internal.h in Sources */,
-				D5A615781696E09D005FBF09 /* latin1tab.h in Sources */,
-				D5A615791696E09D005FBF09 /* macconfig.h in Sources */,
-				D5A6157A1696E09D005FBF09 /* nametab.h in Sources */,
-				D5A6157B1696E09D005FBF09 /* utf8tab.h in Sources */,
-				D5A6157C1696E09D005FBF09 /* xmlparse.c in Sources */,
-				D5A6157D1696E09D005FBF09 /* xmlrole.c in Sources */,
-				D5A6157E1696E09D005FBF09 /* xmlrole.h in Sources */,
-				D5A6157F1696E09D005FBF09 /* xmltok.c in Sources */,
-				D5A615801696E09D005FBF09 /* xmltok.h in Sources */,
-				D5A615811696E09D005FBF09 /* xmltok_impl.c in Sources */,
-				D5A615821696E09D005FBF09 /* xmltok_impl.h in Sources */,
-				D5A615831696E09D005FBF09 /* xmltok_ns.c in Sources */,
-				D5A615711696E094005FBF09 /* expat_ios_config.h in Sources */,
 				D5A613741696D6D9005FBF09 /* dom4c_ios.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -551,6 +691,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		D53F6A7C16984CA9003C8FD1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D53F6A4E16984BA2003C8FD1 /* expat-ios */;
+			targetProxy = D53F6A7B16984CA9003C8FD1 /* PBXContainerItemProxy */;
+		};
+		D53F6AAB16984D9A003C8FD1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D53F6A8316984D54003C8FD1 /* expat-mac */;
+			targetProxy = D53F6AAA16984D9A003C8FD1 /* PBXContainerItemProxy */;
+		};
 		D5DCCBA1165C7EAF00C027A4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = D507A89A1659E6E20015B8B7 /* dom4c */;
@@ -618,7 +768,6 @@
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
-					"MACOS_CLASSIC=1",
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -633,11 +782,68 @@
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				EXECUTABLE_PREFIX = lib;
-				GCC_PREPROCESSOR_DEFINITIONS = "MACOS_CLASSIC=1";
+				GCC_PREPROCESSOR_DEFINITIONS = "";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../../libs/expat-2.1.0/.libs\"",
 				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		D53F6A5916984BA2003C8FD1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				DSTROOT = /tmp/expat_ios.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "expat-ios/expat-ios-Prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		D53F6A5A16984BA2003C8FD1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				DSTROOT = /tmp/expat_ios.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "expat-ios/expat-ios-Prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D53F6A8616984D54003C8FD1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				EXECUTABLE_PREFIX = lib;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+					"MACOS_CLASSIC=1",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		D53F6A8716984D54003C8FD1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				EXECUTABLE_PREFIX = lib;
+				GCC_PREPROCESSOR_DEFINITIONS = "MACOS_CLASSIC=1";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -710,6 +916,22 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		D53F6A5816984BA2003C8FD1 /* Build configuration list for PBXNativeTarget "expat-ios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D53F6A5916984BA2003C8FD1 /* Debug */,
+				D53F6A5A16984BA2003C8FD1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		D53F6A8516984D54003C8FD1 /* Build configuration list for PBXNativeTarget "expat-mac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D53F6A8616984D54003C8FD1 /* Debug */,
+				D53F6A8716984D54003C8FD1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		D5A613751696D6D9005FBF09 /* Build configuration list for PBXNativeTarget "dom4c-ios" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -717,6 +939,7 @@
 				D5A613771696D6D9005FBF09 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D5DCCB9A165C7E1C00C027A4 /* Build configuration list for PBXNativeTarget "domtest" */ = {
 			isa = XCConfigurationList;
